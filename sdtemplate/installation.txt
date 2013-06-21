@@ -1,0 +1,185 @@
+/**************************************************************************\
+Copyright (c) 2004 Geodesic Solutions, LLC
+All rights reserved
+http://www.geodesicsolutions.com
+see license attached to distribution
+ \**************************************************************************/
+
+Thanks for purchasing software from Geodesic Solutions. 
+ 
+1) Uploading files to your site---------------------
+ Upload all files that come with this distribution maintaining the 
+ directory structure
+   
+2) Configuring for Database type-------------------------
+ Geodesic software also requires ADODB to work properly.  ADODB version 1.90 has
+ been included in this distribution to speed installation.  You can go to 
+ http://php.weblogs.com/ADODB or probably one of several other places to get 
+ the latest version if you wish.
+ 
+ Unless you make changes to index.php Geodesic software looks for ADODB in the 
+ classes subdirectory.  Make sure the adodb.inc.php file is in the classes directory as well as the drivers/
+ subdirectory containing all of the ADODB database drivers (or at least the driver to the database type
+ that you will be using).
+ 
+ classes/adodb.inc.php
+ 
+ adodb.inc.php will look for the appropriate database wrapper in the classes/drivers directory
+ 
+ Geodesic software comes set for using a MySQL database.  If you need to use a different database type 
+ uncomment that wrapper class you need to use in sys.php and admin/index.php (and comment out
+ the MySQL wrapper class).  At the top of the sys.php and admin/index.php you will see a list of 
+ database wrapper classes
+ 
+3) Database Connection Information---------------------------------- 
+  Put your database information into the config.php
+  $db_host = "localhost";
+  $db_username = "your-username";
+  $db_password = "your-password";
+  $database = "your-database";
+ 
+4) Setting up Database---------------------------------- 
+ EITHER USE THE AUTOMATIC INSTALL SCRIPT -OR- MANUAL SQL INSTRUCTIONS BELOW
+
+ ------------AUTOMATIC INSTALL SCRIPT----------------------
+ Make sure the entire sql directory contained within your distribution is uploaded into the same directory that 
+ contains the config.php.  Open a browser and open the setup routine contained within
+ the setup directory like so:
+	http://www.yoursite.com/setup/
+ This will start an automatic script that will connect to the database using the database 
+ connection information contained within the config.php file of the directory above it.  This 
+ should install all tables into the database.  This may take a minute or two as the script 
+ processes all database data files.  You should see an installation complete message 
+ when the script is through. 	 
+ ********REMOVE THE SQL DIRECTORY AND ALL ITS CONTENTS FROM THE SERVER ONCE THE DATABASE TABLE
+ INSTALLATION IS COMPLETE**************
+
+
+ ---------------MANUAL SQL Instructions--------------------- 
+
+ The SQL to set up the database structure is in the files sql/1.sql, 2.sql, etc...
+ distributed with this download.  We recommend the (at least temporary) installation of phpMyAdmin 
+ (or some other equivalent database manipulation program) to set up the database.  
+ phpMyAdmin can be found free at:
+ http://www.phpwizard.net/projects/phpMyAdmin/
+ Once phpMyAdmin
+ is installed you can upload the sql files or (possible format of 1.sql, 2.sql, ... - 
+ upload individually) file into it to be executed or cut and paste the 
+ contents of sql/files into the textbox within phpMyAdmin to execute it.  Once executed 
+ successfully the database is setup.  PhpMyAdmin is very useful and we recommend either keeping it 
+ installed permanently (if you do password protect it) or keeping it close at hand where it can be
+ uploaded to your site quickly.  It can be very useful as a second way to get database backups or in 
+ a server db catastrophe.
+ 
+ Geodesic software was built using MySQL and has only been tested with MySQL. There are no complicated 
+ sql statements......But there is always an exception so some modifications may be required to 
+ work with other databases (data types, etc).  Let us know if this is necessary.  
+ 
+5) Updating a new database-------------------------------
+  Note: You can ignore this step if you successfully used the automatic install script.
+  If you received a file that is named something similar to "upgrade_......php" then you will need
+  type the address to this file in a browser. I.E. www.yoursite.com/somefolder/upgrade_...php". This
+  file checks your database to verify that it is current with the latest changes. You will see a page
+  with quite a few sequel statements. It is ok to refresh this page as the file will not adjust the database
+  unless there are changes that have not been made yet.
+ 
+6) Configuring your Geodesic software-------------------------------
+ Note: You can ignore this step if you successfully used the automatic install script.
+ Next login into the admin facility at 
+ If you installed the software  to your root web directory the link will be http://www.yoursite.com/admin/index.php
+ 
+ The default username and password for the admin are:
+ username: admin
+ password: geodesic
+ 
+ If a blank screen is all that appears there is a problem in connecting to the database.  Retrace your
+ steps in setting up the database.  Make sure the adodb.inc.php and the 
+ classes/driver/adodb-%%%%.inc.php wrapper file to the appropriate database type is present.  If the blank 
+ screen persists check the existence of the database table and data necessary to populate some of the 
+ tables are there through the use of PhpMyAdmin.
+ 
+ Once logged in change the following settings by clicking the appropriate buttons.  These setting are
+ required to be configured for your site so that the software can work properly.  On each of the pages 
+ where these configurations are necessary are other non-critical configurations to discover.  We'll just
+ go through the necessary ones here.
+ 
+ SITE CONFIGURATION > GENERAL
+ 	Change the site url field to the current url location of the index.php file 
+ 	(http://www.yoursite.com/index.php).  Also change the administration reply email to your 
+ 	email address.  All communication from the site (except possibly registrations which can be set
+ 	separately there) to the administrator use this email address.
+ 	
+ REGISTRATION CONFIGURATION
+ 	This is where you can set the email address where user's registrations will be sent. 
+ 	You must also set the url of the register.php file.  This is usually in the same 
+ 	directory as your index.php file (http://www.yoursite.com/register.php).  You can also set the script to alert you when users attempt registration and 
+ 	successfully complete the registration.  You can configure all aspects of the registration
+ 	process on this page.
+ 	
+ ADMIN PASSWORD
+ 	Change your admin username, password, and email and save them.
+ 	
+ LISTING CONFIGURATION > IMAGES CONFIGURATION
+ 	If you are going to allow images to be uploaded onto your site you have 2 choices - save as a file on
+ 	the server or save the image in the database.  We HIGHLY recommend saving the images as files within a
+ 	directory.  The file structure system of the server is a little faster at serving up images than
+ 	spooling the image from a database.  If you anticipate at least moderate traffic to your site you
+ 	have to remember that if images are saved in a database that each display of an image saved within
+ 	a listing is a call to the database that must spool a large bit of data to the browser 
+ 	requesting it thus keeping a connection open while doing it.  Saving the images in a file also 
+ 	makes the size of your database considerably less.  Database backups become much easier to handle.
+ 	
+ 	Make your choice for the "allow images to be uploaded".	If "yes" then make your choice for 
+ 	"upload images to database or file directory".
+ 	
+ 	if "save images as file"... set the "url path to image directory if allow uploaded to a file" to 
+ 	the directory the images will be saved in relative to the index.php file.  If the images
+ 	will be in a images/ sub directory of the same directory the index.php file is in then just 
+ 	enter "images/".
+ 	
+ 	if either "allow image to be uploaded" is checked "yes" the "image upload type" must be set.  This
+ 	field comes defaulted to "option 1".  Most servers have this configuration.  
+ 	Option 1 - This choice is made if your server allows the manipulation of images within the /tmp
+ 	directory where the server places them once they have been uploaded from a user.  Try this option
+ 	first and move to option 2 if the server tree structure has been set and you are unable to upload
+ 	images.  If you get an error that says you cannot open a file in the /tmp directory due to 
+ 	permissions you may have to use option 2.
+ 	Option 2 - This choice is made if your server does not allow manipulation of images within the /tmp
+ 	directory.  The images must be moved from the /tmp directory to the directory you set in the 
+ 	"directory path to images directory" field before they can be manipulated.
+ 	
+ 	If you save your images as a file OR have to use option 2 in the image upload type you must set the 
+ 	"directory path to images directory" to the proper server path from root to the directory where
+ 	you are storing or manipulating images.  This is the root server path not just the site path.  You 
+ 	can often see the root path in the directory path of your ftp program when you are uploading or
+ 	in the error messages displayed when there is a php error on your site.  You may have to contact
+ 	your host to find the root server path as many do not expose the root path while ftp-ed into 
+ 	your site.  Once you have set up this make sure the directory has the proper permissions to 
+ 	copy images or manipulate images within this directory.  You can usually set the permissions 
+ 	to this directory through your ftp program or the CHMOD command while telnet-ed into your site.
+ 	
+ 
+7) Email---------------------------------
+ The program just uses the mail() command built into PHP so requires no configuration within the software.
+ Almost every PHP installation has this configured for you so you will not need to worry.  
+ 
+ Just make sure you have the sendmail_path configured correctly within your php.ini file and it 
+ should work properly.
+ 
+ We have experienced some email restrictions at various hosting companies regarding headers. If you experience
+ any email problems in the software be sure to try the 3 different header setting in the general section of your
+ Geodesic Software administration.
+ 
+ 8) Rewrite URLS----------------------
+ Within this distribution is a file called htaccess.txt. Within this file are instructions on how to utilize the Apache
+ mod_rewrite capability. This works with Unix systems only. Consult this file for implementation instructions if you
+ feel that you would like to take advantage of it.
+ 
+Finished!!!!!!!!!!!!!
+
+ Have fun ;)
+ 
+ Geodesic Staff
+ geosupport@geodesicsolutions.com
+ 
+ Contact us with any questions or proposals for this or other possible projects.

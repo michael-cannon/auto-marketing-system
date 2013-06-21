@@ -1,0 +1,28 @@
+<!-- Make sure that the div tag is at the beginning and end of the file -->
+<SCRIPT language="javascript">
+// Set title and text for tooltip
+Text[8] = ["Choose the Listing Duration", "Choose to use a fixed duration and a duration from the dropdown.  Or select start and end time and then select a start and end time for the listings."];
+Text[9] = ["Choose and set Prevalues for Fields", "Choose a field and input a value for each field that you want to be prepopulated with the value you input.  This value will be put in that field for every listing inserted."];
+Text[10] = ["Choose the Fields that will Compose the Title", "Choose the fields below that you wish to use to create a custom title with.  They will be separated by a space.  Note that if you do not select these fields below they will be ignored."];
+Text[11] = ["Select Column Values to go with Data", "Above each column select the field that you want that column to represent in the listing."];
+Text[12] = ["Save Selections to New Profile or Existing Profile", "If you wish to save all of the settings you have set so they can be reused later press Save to New Profile.  If you have a profile loaded and wish to save changes to it press Save Changes to Profile."];
+Text[13] = ["Submit and Upload your Listings", "Hitting submit will submit your data and start the process of inserting your listings."];
+Text[14] = ["Listing Upgrades", "These upgrade options will effect all of the uploaded data."];
+
+Style[1]=["white","#000099","","","",,"black","#e8e8ff","","","",,,,2,"#000099",2,,,,,"",3,,,];
+var TipId = "tiplayer";
+var FiltersEnabled = 1;
+mig_clay();
+</SCRIPT>
+<div id="page_body">
+<form action="index.php?a=200&b=run_queries" method="POST">
+<<HIDDEN_FIELDS>>
+<<DURATION_BLOCK>>
+<<LISTING_FEATURES_BLOCK>>
+<<BUILD_TITLE_BLOCK>>
+<<PREVIEW_BLOCK>>
+<<SAVE_PROFILE_BUTTON>>
+<<LISTING_UPGRADES>>
+<<SUBMIT_BUTTON>>
+</form>
+</div>

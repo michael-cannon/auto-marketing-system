@@ -1,0 +1,104 @@
+<?php
+
+require_once 'Services/PayPal/Profile/EWP.php';
+require_once 'Services/PayPal/Profile/Handler/File.php';
+require_once 'Services/PayPal.php';
+
+class EWPProfileTest extends PHPUnit_TestCase
+{
+    function EWPProfileTest($name)
+    {
+        parent::PHPUnit_TestCase($name);
+    }
+
+    function testProfileCreationNonExist()
+    {
+        $handler =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new EWPProfile($id, $handler);
+
+        $is_valid = $inst->validate();
+
+        $this->assertTrue(Services_PayPal::isError($is_valid), "Validate passed for a brand new profile!");
+
+        unset($inst);
+        $handler->deleteProfile($id);
+    }
+
+    function testValidateProfile()
+    {
+        $handler =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new EWPProfile($id, $handler);
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "Could not create an instance of a new EWPProfile");
+
+        if (Services_PayPal::isError($inst)) {
+            return;
+        }
+
+        touch("/tmp/certificate");
+
+        $inst->setCertificateFile("/tmp/certificate");
+        $inst->setCertificateId('12345678');
+        $inst->setEnvironment('Sandbox');
+
+        $valid = $inst->validate();
+
+        $this->assertFalse(Services_PayPal::isError($valid),
+                           "Validation failed when it should have passed for profile (reason: " .
+                           (is_object($valid) ? $valid->getMessage() : "") . ")");
+        unset($inst);
+        $handler->deleteProfile($id);
+        @unlink("/tmp/certificate");
+    }
+
+    function testCreateProfileFromCode()
+    {
+        $handler = ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new EWPProfile($id, $handler);
+
+        $fr = fopen('/tmp/certificate', 'w');
+
+        $this->assertTrue($fr, "Could not open certificate file for writing..");
+
+        if ($fr) {
+            fputs($fr, "testing");
+            fclose($fr);
+        } else {
+            return;
+        }
+
+        $inst->setCertificateFile("/tmp/certificate");
+        $inst->setCertificateId('12345678');
+        $inst->setEnvironment('Sandbox');
+
+        $result = $inst->validate();
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "Validation of loaded EWP Profile failed: " . (is_object($result) ? $result->getMessage() : ""));
+
+        $retval = $inst->save();
+
+        $this->assertFalse(Services_PayPal::isError($retval),
+                           "Saving of EWP profile failed: " . (is_object($retval) ? $retval->getMessage() : ""));
+
+        $loadinst = EWPProfile::getInstance($id, $handler);
+
+        $this->assertFalse(Services_PayPal::isError($loadinst),
+                           "Could not create an instance of a new EWPProfile:" . (Services_PayPal::isError($loadinst) ? $loadinst->getMessage() : ""));
+
+        if(Services_PayPal::isError($loadinst)) return;
+
+        $result = $loadinst->validate();
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "Validation of loaded EWP Profile failed: " . (is_object($result) ? $result->getMessage() : ""));
+
+        $handler->deleteProfile($id);
+        @unlink("/tmp/certificate");
+    }
+
+}

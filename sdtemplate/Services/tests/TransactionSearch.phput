@@ -1,0 +1,22 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class TransactionSearchTest extends CallerServicesBase
+{
+    function testSearch()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $ts =& Services_PayPal::getType('TransactionSearchRequestType');
+        $ts->setStartDate(date('Y-m-d') . 'T00:00:00-0700');
+
+        $response = $this->caller->TransactionSearch($ts);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'TransactionSearchResponseType'), "Response is not the correct type.");
+    }
+
+}

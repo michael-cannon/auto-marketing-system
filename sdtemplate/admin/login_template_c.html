@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Admin Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.admin_login1 {  font-family: Arial, Helvetica, sans-serif; font-size: 14pt; font-style: normal; font-weight: bold; color: #000066; text-decoration: none}
+.admin_login2 { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: bold; color: #000066; text-decoration: none }
+.admin_login3 { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: bold; color: #000066; text-decoration: none }
+.admin_login4 { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: bold; color: #ffffff; text-decoration: none }
+.admin_login5 { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: bold; color: #007CF9; text-decoration: none }
+.admin_login6 { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: bold; color: #ff0000; text-decoration: none }
+.admin_login7 { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: bold; color: #000066; text-decoration: none }
+.admin_links { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: bold; color: #ffffff; text-decoration: underline }
+-->
+</style>
+<script language="JavaScript">
+<!--
+function check_js_cookies_enabled()
+{
+ /* check for a cookie */
+  if (document.cookie == "") 
+  {
+    /* if a cookie is not found - alert user -
+     change cookieexists field value to false */
+    alert("COOKIES need to be enabled!");
+
+    /* If the user has Cookies disabled an alert will let him know 
+        that cookies need to be enabled to log on.*/ 
+
+    document.getElementById('cookieexists').value ="false"  
+  } else {
+   /* this sets the value to true and nothing else will happen,
+       the user will be able to log on*/
+    document.getElementById('cookieexists').value ="true"
+  }
+}
+
+/* Set a cookie to be sure that one exists.
+   Note that this is outside the function*/
+document.cookie = 'killme' + escape('nothing')
+// -->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" onload="check_js_cookies_enabled()">
+<form action=index.php method=post>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr align="center">
+    <td>
+      <table width="350" border="3" cellspacing="0" cellpadding="1" bordercolor="#71B8FF" background="admin_images/admin_login_page_bg.gif">
+        <tr valign="top">
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr valign="top">
+                <td height="44">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="70"><img src="admin_images/admin_login_logo_c.gif" width="70" height="44"></td>
+                      <td align="center">
+                        <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td class="admin_login1">GeoClassifieds Enterprise</td>
+                          </tr>
+                          <tr>
+                            <td class="admin_login2">Admin Control Panel&nbsp;<span class=admin_login7><<VERSION>></span></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="center">
+                <td height="35" class=admin_login5><<USERNAME_LABEL>>&nbsp;<<USERNAME_FIELD>></td>
+              </tr>
+              <tr align="center">
+                <td height="35" class=admin_login5><<PASSWORD_LABEL>>&nbsp;<<PASSWORD_FIELD>></td>
+              </tr>
+              <tr align="center">
+                <td class=admin_login6><<ERROR>></td>
+              </tr>
+              <tr align="center">
+                <td height="55"><input type="hidden" name="cookieexists" value="false"><<SUBMIT_BUTTON>></td>
+              </tr>
+                <td height="53">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="53"><img src="admin_images/admin_login_bot1.gif" width="53" height="53"></td>
+                      <td background="admin_images/admin_login_bot2.gif" valign="middle">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" height="50">
+                          <tr align="center">
+                            <td class="admin_login3" height="20">Classifieds Management
+                              Software</td>
+                          </tr>
+                          <tr align="center">
+                            <td class="admin_login4" height="30">Copyright 2005.
+                              <a class="admin_links" href="http://www.geodesicsolutions.com" target=new>Geodesic Solutions, LLC.</a><br>
+                              All Rights Reserved.</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

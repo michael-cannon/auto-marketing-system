@@ -1,0 +1,1250 @@
+.build_title
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.build_title_parts
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.build_title_parts_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.build_title_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.build_title_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.category_dropdown
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.category_label
+{
+	text-align: center;
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.category_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.category_select
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.category_table
+{
+	text-align: center;
+	width: 100%;
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.choose_preview_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.choose_preview_list
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.choose_preview_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.choose_preview_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.duration_text_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.duration_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	margin-left: 12em;
+}
+.duration_fixed_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.duration_fixed_hidden_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.duration_variable_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.duration_variable_hidden_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.even_result_row
+{
+	background: #cccccc;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.odd_result_row
+{
+	background: #dddddd;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_browse
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_compression
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_delimiter
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_delimiter_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_encapsulation
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_encapsulation_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_entry_upload
+{
+	text-align: center;
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_entry_submit_button
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_entry_submit_row
+{
+	text-align: center;
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_parts_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_parts_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+}
+.file_row1
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_row3
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_warning_button
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.file_warning_text
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+}
+.filesystem_checkbox
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+}
+.filesystem_radio_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.filesystem_row1
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+}
+.filesystem_row2
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+}
+.filesystem_row3
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+}
+.filesystem_table1
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+}
+.filesystem_text
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.filesystem_text_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_row1, .listing_features_row2, .listing_features_row3, 
+.listing_features_row4, .listing_features_row5
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_cell_1
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	border: solid 1px;
+}
+.listing_features_cell_2
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	border-right: solid 1px;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+}
+.listing_features_table_left
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_table_right
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_check
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_header_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_label_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_features_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.loading_caption
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.preview_iframe
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	overflow-x:scroll;
+	overflow-y:scroll;
+}
+.profile_dropdown
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.profile_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.profile_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.profile_select
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.profile_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+}
+.reset
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.reset
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.reset_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.save_changes_cell
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.save_new_button
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.save_new_cell
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.save_old_button
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.save_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.save_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.submit
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.submit_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.submit_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.submit_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.type_dropdown
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.type_dropdown_select
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.type_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+}
+.type_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.type_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+}
+.user_id_input
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.user_id_input_select
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.user_id_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.user_id_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.user_or_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+}
+.user_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+}
+.username_input
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+}
+.username_input_select
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.username_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.username_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.step1_label, .step2_label, .step3_label, .step4_label, 
+.step5_label, .step6_label, .step7_label, .step8_label,
+.step9_label, .step10_label, .step11_label, .step12_label, .step13_label
+{
+	background: #659ACC;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 100%;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.header_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.choose_preview_select
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.listing_counter
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+}
+.undo_top_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	width: 100%;
+	text-decoration: none;
+}
+.undo_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	width: 100%;
+	text-decoration: none;
+	padding-right: 	10px;
+	padding-left: 	10px;
+}
+.undo_title_row
+{
+	background: #000066;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 100%;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.undo_hidden_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 100%;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.undo_title_cell
+{
+	background: #000066;
+	font-family: Arial,Helvetica, sans-serif;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.undo_label_row
+{
+	background: #659ACC;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.undo_label_cell
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+}
+.undo_time_label_cell
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+}
+.undo_delete_label_cell
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	text-decoration: none;
+}
+.error_row
+{
+	background: #FF0000;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_none_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_none_cell
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_odd_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_even_row
+{
+	background: #F0FAFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_cell
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_time_cell
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.undo_delete_cell
+{
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.bulk_uploader_title_cell
+{
+	background: #000066;
+	font-family: Arial,Helvetica, sans-serif;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 100%;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.bulk_title_cell
+{
+	background: #000066;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 12pt;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.outer_table
+{
+	padding-right: 	10px;
+	padding-left: 	10px;
+	width: 100%
+}
+
+
+
+.form_table
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.form_row
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.form_input
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.form_label
+{
+	background: #FFFFFF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	width:200px;
+	text-align:right;
+}

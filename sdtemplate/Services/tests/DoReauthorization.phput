@@ -1,0 +1,27 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class DoReauthorizationTest extends CallerServicesBase
+{
+    function testReauthorize()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $amount =& Services_PayPal::getType('BasicAmountType');
+        $amount->setval(100);
+        $amount->setattr('currencyID', 'USD');
+
+        $ra =& Services_PayPal::getType('DoReauthorizationRequestType');
+        $ra->setAuthorizationId('0123456789');
+        $ra->setAmount($amount);
+
+        $response = $this->caller->DoReauthorization($ra);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'DoReauthorizationResponseType'), "Response is not the correct type.");
+    }
+
+}

@@ -1,0 +1,49 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class AddressVerifyTest extends CallerServicesBase
+{
+    function testMatch()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $avrt =& Services_PayPal::getType('AddressVerifyRequestType');
+        $avrt->setEmail('sdk-buyer@sdk.com');
+        $avrt->setZip('95100');
+        $avrt->setStreet('123 Main St');
+
+        $response = $this->caller->AddressVerify($avrt);
+        if (Services_PayPal::isError($response)) {
+            return $this->fail("Got back an error, perhaps a SOAP Fault: " . $response->getMessage());
+        }
+
+        $this->assertTrue(is_a($response, 'AddressVerifyResponseType'), "Response is not the correct type.");
+        $this->assertTrue($response->getAck() == 'Success', "ACK should be Success");
+        $this->assertTrue($response->getConfirmationCode() == 'Confirmed', "Address should be confirmed");
+    }
+
+    function testNomatch()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $avrt =& Services_PayPal::getType('AddressVerifyRequestType');
+        $avrt->setEmail('sdk-buyer@sdk.com');
+        $avrt->setZip('90210');
+        $avrt->setStreet('1 Glamour Dr');
+
+        $response = $this->caller->AddressVerify($avrt);
+        if (Services_PayPal::isError($response)) {
+            return $this->fail("Got back an error, perhaps a SOAP Fault: " . $response->getMessage());
+        }
+
+        $this->assertTrue(is_a($response, 'AddressVerifyResponseType'), "Response is not the correct type.");
+        $this->assertTrue($response->getAck() == 'Success', "ACK should be Success");
+        $this->assertTrue($response->getConfirmationCode() == 'Unconfirmed', "Address should not be confirmed");
+    }
+
+}

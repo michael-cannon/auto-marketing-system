@@ -1,0 +1,167 @@
+
+-----css----
+most tags here can be declared with both ids and classes
+
+	# declaration
+	-----ids-----
+		header_row						<tr> tag of listings table header
+		header_column					<td> tags of listings table header
+		listing_row						<tr> tag of a listing
+		listing_column					<td> tags of a listing
+		categories						<ul> tag
+		logo							<img> tag
+		pages							<ul> tag
+		menu_title						<li> tag
+		home							<li> tag
+		category						<li> tag
+		page							<li> tag
+		body_table						<table> tag
+		listings_table					<table> tag
+		listings_row					<tr> tag of body_table
+		listings_column					<td> tag of body_table
+	
+	. declaration
+	---classes---
+		normal_results_header			<td> tag
+		browsing_result_page_links		^
+		more_results					^
+		header_row						<tr> tag
+		business_type_column_header		<td> tag
+		title_column_header				^
+		description_column_header		^
+		optional_field_header_1 - 20	^
+		city_column_header				^
+		state_column_header				^
+		country_column_header			^
+		zip_column_header				^
+		number_bids_header				^
+		price_column_header				^
+		entry_date_column_header		^
+		time_left_header				^
+		listing_even_bold				^
+		listing_even					^
+		listing_odd_bold				^
+		listing_odd						^
+		no_ads_in_category				^
+		category_menu_title				<li> tag
+		page_menu_title					<li> tag
+		menu_item						<li> tag
+		menu_title						<li> tag
+		body_table						<table> tag
+		listings_row					<tr> tag
+		listings_column					<td> tag
+		listings_table					<table> tag
+
+----edited-files----
+	index.php
+	nochex_apc.php
+	nochex_initiate.php
+	paypal_initiate.php
+	paypalipn.php
+	----classes----
+		browse_ads.php
+		browse_display_ad.php
+		classified_sell_class.php
+		renew_subscriptions.php
+		site_class.php
+		user_management_information.php
+	----admin----
+		index.php
+		admin_home.php
+		admin_group_management_class.php
+		admin_site_configuration_class.php
+		admin_transaction_management_class.php
+		
+----added-template-tags----
+
+	----listing details "ad display page"----
+		<<STOREFRONT_LINK>>
+		
+----storefront-template-tags----
+all markup variables must be in order as below
+management capsules will only appear when the browser is the owner of the store
+default store manager will not appear on extra pages
+extra page manager will not appear on home/category store browsing
+
+	(!STOREFRONT_HEAD!)
+		required, loads javascript functions for storefront management
+
+	(!STOREFRONT_LOGO!)
+		echos out img reference of users's logo
+
+	(!STOREFRONT_WELCOME_NOTE!)
+		echos out text of user's logo
+
+	(!STOREFRONT_CATEGORIES MENU_TITLE="Categories"!)
+		echos out an unordered list of the users's categories
+
+	(!STOREFRONT_PAGES MENU_TITLE="Pages"!)
+		echos out an unordered list of the users's pages
+			
+	(!STOREFRONT_LISTINGS!)
+		echos out a table populated with the user's listings
+
+	(!STOREFRONT_MANAGER!)
+		starts the storefront manager capsule.  code between this and the
+		"(!END_STOREFRONT_MANAGER!)" tag will be parsed out if the browser is not the owner of the store 
+	
+	(!END_STOREFRONT_MANAGER!)
+		stops the storefront manager capsule.  code between the "(!STOREFRONT_MANAGER!)" tag and this 
+		will be parsed out if the browser is not the owner of the store
+
+	(!STOREFRONT_MANAGER_ERROR!)
+		echos out an error if any is generated.	
+	
+	(!STOREFRONT_MANAGER_LOGO BUTTON_TEXT="update"!)
+		echos out file input field and submit button
+
+	(!STOREFRONT_MANAGER_WELCOME_NOTE BUTTON_TEXT="update"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_HOME_LINK BUTTON_TEXT="edit"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_CATEGORIES_ADD BUTTON_TEXT="add"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_CATEGORIES_EDIT BUTTON_TEXT="edit"!)
+		echos out select field, text input field and submit button
+
+	(!STOREFRONT_MANAGER_CATEGORIES_DELETE BUTTON_TEXT="delete"!)
+		echos out two select fields and submit button
+
+	(!STOREFRONT_MANAGER_CATEGORIES_SORT BUTTON_TEXT="sort"!)
+		echos out select field for each category and submit button
+
+	(!STOREFRONT_MANAGER_PAGE_ADD BUTTON_TEXT="add"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_TEMPLATE BUTTON_TEXT="update"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_HOLD ON_BUTTON_TEXT="turn off" OFF_BUTTON_TEXT="turn on"!)
+		echos out submit button
+
+	(!STOREFRONT_MANAGER_EXTRA_PAGE!)
+		starts the storefront manager capsule.  code between this and the
+		"(!END_STOREFRONT_MANAGER_EXTRA_PAGE!)" tag will be parsed out if the browser is not the owner of the store 
+	
+	(!END_STOREFRONT_MANAGER_EXTRA_PAGE!)
+		stops the storefront manager capsule.  code between the "(!STOREFRONT_MANAGER_EXTRA_PAGE!)" tag and this 
+		will be parsed out if the browser is not the owner of the store
+
+	(!STOREFRONT_MANAGER_ERROR!)
+		echos out an error if any is generated.	
+
+	(!STOREFRONT_MANAGER_PAGE_BODY BUTTON_TEXT="edit" COLUMNS="60" ROWS="20"!)
+		echos out text area and submit button
+
+	(!STOREFRONT_MANAGER_PAGE_NAME BUTTON_TEXT="edit"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_PAGE_LINK_TEXT BUTTON_TEXT="edit"!)
+		echos out text input field and submit button
+
+	(!STOREFRONT_MANAGER_PAGE_DELETE BUTTON_TEXT="delete"!)
+		echos out submit button
+	

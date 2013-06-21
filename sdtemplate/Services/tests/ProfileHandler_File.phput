@@ -1,0 +1,108 @@
+<?php
+
+require_once 'Services/PayPal.php';
+require_once 'Services/PayPal/Profile/Handler/File.php';
+
+class ProfileHandler_FileTest extends PHPUnit_TestCase
+{
+    function ProfileHandler_FileTest($name)
+    {
+        parent::PHPUnit_TestCase($name);
+    }
+
+    function testSaveData()
+    {
+        $data = array('foo' => 'bar',
+                      10 => 20);
+
+        $inst =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "ProfileHandler_File failed to return a valid instance");
+
+        $id = $inst->saveProfile($data);
+
+        $this->assertFalse(Services_PayPal::isError($id),
+                           "ProfileHandler_File failed to save the profile and return a valid id");
+
+        $filename = $inst->_getFilename($id);
+
+        $this->assertTrue(file_exists($filename),
+                          "Could not find the file saved by the ProfileHandler '$filename'");
+
+        $result = $inst->deleteProfile($id);
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "ProfileHandler_File failed to delete the profile with id '$id': ");
+    }
+
+    function testLoadData()
+    {
+        $data = array('foo' => 'bar',
+                      10 => 20);
+
+        $inst =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "ProfileHandler_File failed to return a valid instance: ");
+
+        $id = $inst->saveProfile($data);
+
+        $this->assertFalse(Services_PayPal::isError($id),
+                           "ProfileHandler_File failed to save the profile and return a valid id:");
+
+        $newdata = $inst->loadProfile($id);
+
+        $this->assertFalse(Services_PayPal::isError($newdata),
+                           "Loading of profile data failed: ");
+
+        $this->assertTrue((is_array($newdata) && isset($newdata['foo'])),
+                          "Loading of profile data did not return expected data.");
+
+        $result = $inst->deleteProfile($id);
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "ProfileHandler_File failed to delete the profile with id '$id': ");
+
+    }
+
+    function testListProfiles()
+    {
+        $data = array('foo' => 'bar',
+                      10 => 20);
+
+        $inst =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "ProfileHandler_File failed to return a valid instance: ");
+
+        $id[] = $inst->saveProfile($data);
+        $id[] = $inst->saveProfile($data);
+        $id[] = $inst->saveProfile($data);
+        $id[] = $inst->saveProfile($data);
+        $id[] = $inst->saveProfile($data);
+
+        foreach($id as $oneid)
+        {
+            $this->assertFalse(Services_PayPal::isError($oneid),
+                               "One of the ids saved for listProfile() test failed");
+        }
+
+        $profiles = $inst->listProfiles();
+
+        $this->assertTrue((count($profiles) == 5),
+                          "Did not list all of the profiles (found " . count($profiles) . " looking for 5");
+
+        foreach($profiles as $profileid)
+        {
+            $this->assertTrue(in_array($profileid, $id),
+                              "Profile id '$profileid' returned from list, but not in original list.");
+
+            $retval = $inst->deleteProfile($profileid);
+
+            $this->assertFalse(Services_PayPal::isError($retval),
+                               "Could not delete profile with profile ID '$profileid': ");
+        }
+    }
+
+}

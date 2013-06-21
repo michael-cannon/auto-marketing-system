@@ -1,0 +1,31 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class SetExpressCheckoutTest extends CallerServicesBase
+{
+    function testSetExpressCheckout()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $amount =& Services_PayPal::getType('BasicAmountType');
+        $amount->setval(0.5);
+        $amount->setattr('currencyID', 'USD');
+
+        $ecd =& Services_PayPal::getType('SetExpressCheckoutRequestDetailsType');
+        $ecd->setOrderTotal($amount);
+        $ecd->setReturnURL('http://www.example.com/return');
+        $ecd->setCancelURL('http://www.example.com/cancel');
+
+        $ec =& Services_PayPal::getType('SetExpressCheckoutRequestType');
+        $ec->setSetExpressCheckoutRequestDetails($ecd);
+
+        $response = $this->caller->SetExpressCheckout($ec);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'SetExpressCheckoutResponseType'), "Response is not the correct type.");
+    }
+
+}

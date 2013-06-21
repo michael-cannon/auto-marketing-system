@@ -1,0 +1,22 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class DoVoidTest extends CallerServicesBase
+{
+    function testVoid()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $v =& Services_PayPal::getType('DoVoidRequestType');
+        $v->setAuthorizationId('0123456789');
+
+        $response = $this->caller->DoVoid($v);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'DoVoidResponseType'), "Response is not the correct type.");
+    }
+
+}

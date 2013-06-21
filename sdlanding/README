@@ -1,0 +1,21 @@
+@author Michael Cannon <michael@peimic.com>
+@version $Id: README,v 1.1.1.1 2010/04/15 09:42:35 peimic.comprock Exp $
+
+These files are designed to act as a baseline template series for Movingiron
+Super Sales. In general sales options are placed in config.php and are
+automaticfally propagated out to the template files.
+
+Quick Instructions
+----
+* Copy folder file contents to the add-on domain location.
+* run `sh email-log.sh` to create email-log.txt file
+* Upload dealer videos and Google map image to the root directory.
+* Configure config.php
+** With above file name edits.
+** With sale theme
+** With dealership specific information
+** Link to an auction site, by putting auction site URL in MI_AUCTION_URL
+*** The validate form will automatically swap between sale and non-sale forms.
+
+
+Have trouble? Email michael@peimic.com and sergey@peimic.com.

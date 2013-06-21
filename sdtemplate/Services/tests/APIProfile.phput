@@ -1,0 +1,128 @@
+<?php
+
+require_once 'Services/PayPal/Profile/API.php';
+require_once 'Services/PayPal/Profile/Handler/File.php';
+require_once 'Services/PayPal.php';
+
+class APIProfileTest extends PHPUnit_TestCase
+{
+    function APIProfileTest($name)
+    {
+        parent::PHPUnit_TestCase($name);
+    }
+
+    function testProfileCreationNonExist()
+    {
+        $handler =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new APIProfile($id, $handler);
+
+        $is_valid = $inst->validate();
+
+        $this->assertTrue(Services_PayPal::isError($is_valid), "Validate passed for a brand new profile!");
+
+        unset($inst);
+        $handler->deleteProfile($id);
+
+    }
+    
+    function testLoadEnvironments()
+    {
+        $handler =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new APIProfile($id, $handler);
+        
+        $this->assertFalse(Services_PayPal::isError($inst->loadEnvironments()),
+                           "Could not load valid environments");
+        
+        $environments = $inst->getValidEnvironments();
+        
+        $this->assertFalse(empty($environments), "Loaded environments, but found none!");
+    }
+
+    function testValidateProfile()
+    {
+        $handler =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new APIProfile($id, $handler);
+
+        $this->assertFalse(Services_PayPal::isError($inst->loadEnvironments()),
+                           "Could not load valid environments");
+        
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "Could not create an instance of a new APIProfile");
+
+        if (Services_PayPal::isError($inst)) {
+            return;
+        }
+
+        touch("/tmp/certificate");
+
+        $inst->setAPIUsername("testing");
+        $inst->setAPIPassword("foobar");
+        $inst->setCertificateFile("/tmp/certificate");
+
+        $res = $inst->setEnvironment("Live");
+        
+        $this->assertFalse(Services_PayPal::isError($res), "Could not set environment: " . (Services_PayPal::isError($res) ? $res->getMessage() : ""));
+
+        $valid = $inst->validate();
+        
+        $this->assertFalse(Services_PayPal::isError($valid),
+                           "Validation failed when it should have passed for profile (reason: " .
+                           (is_object($valid) ? $valid->getMessage() : "") . ")");
+        unset($inst);
+        $handler->deleteProfile($id);
+        @unlink("/tmp/certificate");
+    }
+
+    function testCreateProfileFromCode()
+    {
+        $username = "testing";
+        $handler =& ProfileHandler_File::getInstance(array('path' => '/tmp'));
+        $id = $handler->generateID();
+        $inst =& new APIProfile($id, $handler);
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "Could not create an instance of a new APIProfile");
+
+        if (Services_PayPal::isError($inst)) {
+            return;
+        }
+
+        touch("/tmp/certificate");
+
+        $inst->setAPIUsername($username);
+        $inst->setAPIPassword("foobar");
+        $inst->setCertificateFile("/tmp/certificate");
+        $inst->setEnvironment("Live");
+
+        $retval = $inst->save();
+
+        $this->assertFalse(Services_PayPal::isError($retval),
+                           "Saving of API profile failed: " . (is_object($retval) ? $retval->getMessage() : ""));
+
+        $loadinst = APIProfile::getInstance($id, $handler);
+
+        $this->assertFalse(Services_PayPal::isError($loadinst),
+                           "Could not create an instance of a new APIProfile");
+
+        if (Services_PayPal::isError($loadinst)) {
+            return;
+        }
+
+        $loadinst->setAPIPassword("foobar");
+        $result = $loadinst->validate();
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "Validation of loaded API Profile failed: " . (is_object($result) ? $result->getMessage() : ""));
+
+        $loaded_username = $loadinst->getAPIUsername();
+
+        $this->assertEquals($username, $loaded_username,
+                            "Load failed, username '$username' does not equal loaded username '$loaded_username'");
+        $handler->deleteProfile($id);
+        @unlink("/tmp/certificate");
+    }
+
+}

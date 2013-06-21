@@ -1,0 +1,29 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class BillUserTest extends CallerServicesBase
+{
+    function testBillUser()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $amount =& Services_PayPal::getType('BasicAmountType');
+        $amount->setval(100);
+        $amount->setattr('currencyID', 'USD');
+
+        $pd =& Services_PayPal::getType('MerchantPullPaymentType');
+        $pd->setAmount($amount);
+        $pd->setMpID('merchantPullId');
+        $b =& Services_PayPal::getType('BillUserRequestType');
+        $b->setMerchantPullPaymentDetails($pd);
+
+        $response = $this->caller->BillUser($b);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault" . (Services_PayPal::isError($response) ? $response->getMessage() : ""));
+        $this->assertTrue(is_a($response, 'BillUserResponseType'), "Response is not the correct type.");
+    }
+
+}

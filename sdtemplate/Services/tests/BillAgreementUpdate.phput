@@ -1,0 +1,23 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class BillAgreementUpdateTest extends CallerServicesBase
+{
+    function testUpdate()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $bau =& Services_PayPal::getType('BAUpdateRequestType');
+        $bau->setDesc('123');
+        $bau->setMpID('B-96V859187D8638726');
+
+        $response = $this->caller->BillAgreementUpdate($bau);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'BAUpdateResponseType'), "Response is not the correct type.");
+    }
+
+}

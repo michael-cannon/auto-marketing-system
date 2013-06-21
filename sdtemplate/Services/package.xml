@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0">
+  <name>Services_PayPal</name>
+  <summary>PayPal SOAP Toolkit</summary>
+  <description>This package provides an SDK for accessing PayPal services
+remotely. It hides the details of the SOAP interaction from the
+user.</description>
+  <maintainers>
+    <maintainer>
+      <user>pp</user>
+      <name>PayPal</name>
+      <email>sdk@paypal.com</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>0.0.1</version>
+    <date>2005-04-25</date>
+    <license>PHP License</license>
+    <state>beta</state>
+    <notes>Initial SDK release</notes>
+    <deps>
+      <dep type="php" rel="ge" version="4.3.0+"/>
+      <dep type="ext" rel="has">curl</dep>
+      <dep type="ext" rel="has">openssl</dep>
+      <dep type="pkg" rel="has">HTTP_Request</dep>
+      <dep type="pkg" rel="has">Log</dep>
+    </deps>
+    <filelist>
+      <dir baseinstalldir="Services" name="/">
+       <dir name="docs">
+        <file role="doc" name="sample_request.xml"/>
+        <dir name="apidoc">
+         <file role="doc" name="blank.html"/>
+         <file role="doc" name="classtrees_Services_PayPal.html"/>
+         <file role="doc" name="elementindex.html"/>
+         <file role="doc" name="elementindex_Services_PayPal.html"/>
+         <file role="doc" name="index.html"/>
+         <file role="doc" name="li_Services_PayPal.html"/>
+         <file role="doc" name="packages.html"/>
+         <dir name="media">
+          <file role="doc" name="banner.css"/>
+          <file role="doc" name="stylesheet.css"/>
+         </dir> <!-- docs/apidoc/media -->
+         <dir name="Services_PayPal">
+          <file role="doc" name="AbstractRequestType.html"/>
+          <file role="doc" name="AbstractResponseType.html"/>
+          <file role="doc" name="AccountEntryType.html"/>
+          <file role="doc" name="AccountSummaryType.html"/>
+          <file role="doc" name="AdditionalAccountType.html"/>
+          <file role="doc" name="AddressType.html"/>
+          <file role="doc" name="AddressVerifyRequestType.html"/>
+          <file role="doc" name="AddressVerifyResponseType.html"/>
+          <file role="doc" name="AmountType.html"/>
+          <file role="doc" name="APIProfile.html"/>
+          <file role="doc" name="AttributeSetType.html"/>
+          <file role="doc" name="AttributeType.html"/>
+          <file role="doc" name="AuctionInfoType.html"/>
+          <file role="doc" name="BasicAmountType.html"/>
+          <file role="doc" name="BAUpdateRequestType.html"/>
+          <file role="doc" name="BAUpdateResponseDetailsType.html"/>
+          <file role="doc" name="BAUpdateResponseType.html"/>
+          <file role="doc" name="BillUserRequestType.html"/>
+          <file role="doc" name="BillUserResponseType.html"/>
+          <file role="doc" name="BuyerType.html"/>
+          <file role="doc" name="CalculatedShippingRateType.html"/>
+          <file role="doc" name="CallerServices.html"/>
+          <file role="doc" name="CategoryArrayType.html"/>
+          <file role="doc" name="CategoryType.html"/>
+          <file role="doc" name="CharityType.html"/>
+          <file role="doc" name="CreditCardDetailsType.html"/>
+          <file role="doc" name="CrossPromotionsType.html"/>
+          <file role="doc" name="CustomSecurityHeaderType.html"/>
+          <file role="doc" name="DoCaptureRequestType.html"/>
+          <file role="doc" name="DoCaptureResponseDetailsType.html"/>
+          <file role="doc" name="DoCaptureResponseType.html"/>
+          <file role="doc" name="DoDirectPaymentRequestDetailsType.html"/>
+          <file role="doc" name="DoDirectPaymentRequestType.html"/>
+          <file role="doc" name="DoDirectPaymentResponseType.html"/>
+          <file role="doc" name="DoExpressCheckoutPaymentRequestDetailsType.html"/>
+          <file role="doc" name="DoExpressCheckoutPaymentRequestType.html"/>
+          <file role="doc" name="DoExpressCheckoutPaymentResponseDetailsType.html"/>
+          <file role="doc" name="DoExpressCheckoutPaymentResponseType.html"/>
+          <file role="doc" name="DoReauthorizationRequestType.html"/>
+          <file role="doc" name="DoReauthorizationResponseType.html"/>
+          <file role="doc" name="DoVoidRequestType.html"/>
+          <file role="doc" name="DoVoidResponseType.html"/>
+          <file role="doc" name="ErrorParameterType.html"/>
+          <file role="doc" name="ErrorType.html"/>
+          <file role="doc" name="EWPProfile.html"/>
+          <file role="doc" name="EWPServices.html"/>
+          <file role="doc" name="FaultDetailsType.html"/>
+          <file role="doc" name="FeesType.html"/>
+          <file role="doc" name="FeeType.html"/>
+          <file role="doc" name="FlatShippingRateType.html"/>
+          <file role="doc" name="GetExpressCheckoutDetailsRequestType.html"/>
+          <file role="doc" name="GetExpressCheckoutDetailsResponseDetailsType.html"/>
+          <file role="doc" name="GetExpressCheckoutDetailsResponseType.html"/>
+          <file role="doc" name="GetTransactionDetailsRequestType.html"/>
+          <file role="doc" name="GetTransactionDetailsResponseType.html"/>
+          <file role="doc" name="ItemArrayType.html"/>
+          <file role="doc" name="ItemType.html"/>
+          <file role="doc" name="ListingDesignerType.html"/>
+          <file role="doc" name="ListingDetailsType.html"/>
+          <file role="doc" name="ListOfAttributeSetType.html"/>
+          <file role="doc" name="MassPayRequestItemType.html"/>
+          <file role="doc" name="MassPayRequestType.html"/>
+          <file role="doc" name="MassPayResponseType.html"/>
+          <file role="doc" name="MeasureType.html"/>
+          <file role="doc" name="MerchantPullInfoType.html"/>
+          <file role="doc" name="MerchantPullPaymentResponseType.html"/>
+          <file role="doc" name="MerchantPullPaymentType.html"/>
+          <file role="doc" name="ModifiedFieldType.html"/>
+          <file role="doc" name="OptionType.html"/>
+          <file role="doc" name="PaginationResultType.html"/>
+          <file role="doc" name="PaginationType.html"/>
+          <file role="doc" name="PayerInfoType.html"/>
+          <file role="doc" name="PaymentDetailsType.html"/>
+          <file role="doc" name="PaymentDetailsItemType.html"/>
+          <file role="doc" name="PaymentInfoType.html"/>
+          <file role="doc" name="PaymentItemInfoType.html"/>
+          <file role="doc" name="PaymentItemType.html"/>
+          <file role="doc" name="PaymentMeansType.html"/>
+          <file role="doc" name="PaymentTransactionSearchResultType.html"/>
+          <file role="doc" name="PaymentTransactionType.html"/>
+          <file role="doc" name="PaymentType.html"/>
+          <file role="doc" name="PayPal_Error.html"/>
+          <file role="doc" name="PayPal_SDK.html"/>
+          <file role="doc" name="PayPal_SDK_EndpointMappingParser.html"/>
+          <file role="doc" name="PayPal_SDK_Generator.html"/>
+          <file role="doc" name="PersonNameType.html"/>
+          <file role="doc" name="Profile.html"/>
+          <file role="doc" name="ProfileHandler.html"/>
+          <file role="doc" name="ProfileHandler_Array.html"/>
+          <file role="doc" name="ProfileHandler_File.html"/>
+          <file role="doc" name="PromotedItemType.html"/>
+          <file role="doc" name="QuantityType.html"/>
+          <file role="doc" name="ReceiverInfoType.html"/>
+          <file role="doc" name="RefundTransactionRequestType.html"/>
+          <file role="doc" name="RefundTransactionResponseType.html"/>
+          <file role="doc" name="ReviseStatusType.html"/>
+          <file role="doc" name="SalesTaxType.html"/>
+          <file role="doc" name="SchedulingInfoType.html"/>
+          <file role="doc" name="SellerType.html"/>
+          <file role="doc" name="SellingStatusType.html"/>
+          <file role="doc" name="Services_PayPal.html"/>
+          <file role="doc" name="SetExpressCheckoutRequestDetailsType.html"/>
+          <file role="doc" name="SetExpressCheckoutRequestType.html"/>
+          <file role="doc" name="SetExpressCheckoutResponseType.html"/>
+          <file role="doc" name="ShippingCarrierDetailsType.html"/>
+          <file role="doc" name="ShippingDetailsType.html"/>
+          <file role="doc" name="SiteHostedPictureType.html"/>
+          <file role="doc" name="StorefrontType.html"/>
+          <file role="doc" name="SubscriptionInfoType.html"/>
+          <file role="doc" name="SubscriptionTermsType.html"/>
+          <file role="doc" name="TransactionSearchRequestType.html"/>
+          <file role="doc" name="TransactionSearchResponseType.html"/>
+          <file role="doc" name="TransactionStatusType.html"/>
+          <file role="doc" name="TransactionsType.html"/>
+          <file role="doc" name="TransactionType.html"/>
+          <file role="doc" name="UserIdPasswordType.html"/>
+          <file role="doc" name="UserType.html"/>
+          <file role="doc" name="ValType.html"/>
+          <file role="doc" name="VATDetailsType.html"/>
+          <file role="doc" name="VendorHostedPictureType.html"/>
+          <file role="doc" name="XSDSimpleType.html"/>
+          <file role="doc" name="XSDType.html"/>
+          <file role="doc" name="_PayPal_PayPal_CallerServices_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Error_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_EWPServices_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Profile_API_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Profile_EWP_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Profile_Handler_Array_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Profile_Handler_File_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Profile_Handler_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Profile_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_SDK_Generator_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_SDK_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AbstractRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AbstractResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AccountEntryType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AccountSummaryType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AdditionalAccountType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AddressType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AddressVerifyRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AddressVerifyResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AmountType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AttributeSetType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AttributeType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_AuctionInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BasicAmountType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BAUpdateRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BAUpdateResponseDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BAUpdateResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BillUserRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BillUserResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_BuyerType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CalculatedShippingRateType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CategoryArrayType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CategoryType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CharityType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CreditCardDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CrossPromotionsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_CustomSecurityHeaderType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoCaptureRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoCaptureResponseDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoCaptureResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoDirectPaymentRequestDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoDirectPaymentRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoDirectPaymentResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoExpressCheckoutPaymentRequestDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoExpressCheckoutPaymentRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoExpressCheckoutPaymentResponseDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoExpressCheckoutPaymentResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoReauthorizationRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoReauthorizationResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoVoidRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_DoVoidResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ErrorParameterType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ErrorType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_FaultDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_FeesType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_FeeType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_FlatShippingRateType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_GetExpressCheckoutDetailsRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_GetExpressCheckoutDetailsResponseDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_GetExpressCheckoutDetailsResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_GetTransactionDetailsRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_GetTransactionDetailsResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ItemArrayType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ItemType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ListingDesignerType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ListingDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ListOfAttributeSetType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MassPayRequestItemType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MassPayRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MassPayResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MeasureType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MerchantPullInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MerchantPullPaymentResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_MerchantPullPaymentType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ModifiedFieldType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_OptionType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaginationResultType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaginationType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PayerInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentDetailsItemType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentItemInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentItemType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentMeansType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentTransactionSearchResultType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentTransactionType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PaymentType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PersonNameType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_PromotedItemType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_QuantityType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ReceiverInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_RefundTransactionRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_RefundTransactionResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ReviseStatusType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SalesTaxType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SchedulingInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SellerType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SellingStatusType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SetExpressCheckoutRequestDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SetExpressCheckoutRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SetExpressCheckoutResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ShippingCarrierDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ShippingDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SiteHostedPictureType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_StorefrontType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SubscriptionInfoType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_SubscriptionTermsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_TransactionSearchRequestType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_TransactionSearchResponseType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_TransactionStatusType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_TransactionsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_TransactionType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_UserIdPasswordType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_UserType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_ValType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_VATDetailsType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_VendorHostedPictureType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_XSDSimpleType_php.html"/>
+          <file role="doc" name="_PayPal_PayPal_Type_XSDType_php.html"/>
+         </dir> <!-- docs/apidoc/Services_PayPal -->
+        </dir> <!-- docs/apidoc -->
+        <dir name="examples">
+         <file role="doc" name="AddressVerify.php"/>
+         <file role="doc" name="BillAgreementUpdate.php"/>
+         <file role="doc" name="BillUser.php"/>
+         <file role="doc" name="DoCapture.php"/>
+         <file role="doc" name="DoDirectPayment.php"/>
+         <file role="doc" name="DoExpressCheckoutPayment.php"/>
+         <file role="doc" name="DoReauthorization.php"/>
+         <file role="doc" name="DoVoid.php"/>
+         <file role="doc" name="GetExpressCheckoutDetails.php"/>
+         <file role="doc" name="GetTransactionDetails.php"/>
+         <file role="doc" name="MassPay.php"/>
+         <file role="doc" name="RefundTransaction.php"/>
+         <file role="doc" name="request_base.php"/>
+         <file role="doc" name="SetExpressCheckout.php"/>
+         <file role="doc" name="TransactionSearch.php"/>
+        </dir> <!-- docs/examples -->
+       </dir> <!-- docs -->
+       <dir name="PayPal">
+        <file role="php" name="CallerServices.php"/>
+        <file role="php" name="CallerServices.php.in"/>
+        <file role="php" name="Error.php"/>
+        <file role="php" name="EWPServices.php"/>
+        <file role="php" name="Profile.php"/>
+        <file role="php" name="SDK.php"/>
+        <dir name="build">
+         <file role="php" name="README"/>
+        </dir> <!-- PayPal/build -->
+        <dir name="cert">
+         <file role="php" name="api_cert_chain.crt"/>
+         <file role="php" name="live.paypal.com.pem"/>
+         <file role="php" name="sandbox.paypal.com.pem"/>
+        </dir> <!-- PayPal/cert -->
+        <dir name="conf">
+         <file role="php" name="paypal-sdk.php.dist"/>
+        </dir> <!-- PayPal/conf -->
+        <dir name="Profile">
+         <file role="php" name="API.php"/>
+         <file role="php" name="EWP.php"/>
+         <file role="php" name="Handler.php"/>
+         <dir name="Handler">
+          <file role="php" name="Array.php"/>
+          <file role="php" name="File.php"/>
+         </dir> <!-- PayPal/Profile/Handler -->
+        </dir> <!-- PayPal/Profile -->
+        <dir name="SDK">
+         <file role="php" name="Generator.php"/>
+        </dir> <!-- PayPal/SDK -->
+        <dir name="SOAP">
+         <file role="php" name="Base.php"/>
+         <file role="php" name="Client.php"/>
+         <file role="php" name="Disco.php"/>
+         <file role="php" name="Fault.php"/>
+         <file role="php" name="Parser.php"/>
+         <file role="php" name="Server.php"/>
+         <file role="php" name="Transport.php"/>
+         <file role="php" name="Value.php"/>
+         <file role="php" name="WSDL.php"/>
+         <dir name="Server">
+          <file role="php" name="Email.php"/>
+          <file role="php" name="Email_Gateway.php"/>
+          <file role="php" name="TCP.php"/>
+         </dir> <!-- PayPal/SOAP/Server -->
+         <dir name="Transport">
+          <file role="php" name="HTTP.php"/>
+          <file role="php" name="SMTP.php"/>
+          <file role="php" name="TCP.php"/>
+         </dir> <!-- PayPal/SOAP/Transport -->
+         <dir name="Type">
+          <file role="php" name="dateTime.php"/>
+          <file role="php" name="duration.php"/>
+          <file role="php" name="hexBinary.php"/>
+         </dir> <!-- PayPal/SOAP/Type -->
+        </dir> <!-- PayPal/SOAP -->
+        <dir name="Type">
+         <file role="php" name="AbstractRequestType.php"/>
+         <file role="php" name="AbstractResponseType.php"/>
+         <file role="php" name="AccountEntryType.php"/>
+         <file role="php" name="AccountSummaryType.php"/>
+         <file role="php" name="AdditionalAccountType.php"/>
+         <file role="php" name="AddressType.php"/>
+         <file role="php" name="AddressVerifyRequestType.php"/>
+         <file role="php" name="AddressVerifyResponseType.php"/>
+         <file role="php" name="AmountType.php"/>
+         <file role="php" name="AttributeSetType.php"/>
+         <file role="php" name="AttributeType.php"/>
+         <file role="php" name="AuctionInfoType.php"/>
+         <file role="php" name="BasicAmountType.php"/>
+         <file role="php" name="BAUpdateRequestType.php"/>
+         <file role="php" name="BAUpdateResponseDetailsType.php"/>
+         <file role="php" name="BAUpdateResponseType.php"/>
+         <file role="php" name="BillUserRequestType.php"/>
+         <file role="php" name="BillUserResponseType.php"/>
+         <file role="php" name="BuyerType.php"/>
+         <file role="php" name="CalculatedShippingRateType.php"/>
+         <file role="php" name="CategoryArrayType.php"/>
+         <file role="php" name="CategoryType.php"/>
+         <file role="php" name="CharityType.php"/>
+         <file role="php" name="CreditCardDetailsType.php"/>
+         <file role="php" name="CrossPromotionsType.php"/>
+         <file role="php" name="CustomSecurityHeaderType.php"/>
+         <file role="php" name="DoCaptureRequestType.php"/>
+         <file role="php" name="DoCaptureResponseDetailsType.php"/>
+         <file role="php" name="DoCaptureResponseType.php"/>
+         <file role="php" name="DoDirectPaymentRequestDetailsType.php"/>
+         <file role="php" name="DoDirectPaymentRequestType.php"/>
+         <file role="php" name="DoDirectPaymentResponseType.php"/>
+         <file role="php" name="DoExpressCheckoutPaymentRequestDetailsType.php"/>
+         <file role="php" name="DoExpressCheckoutPaymentRequestType.php"/>
+         <file role="php" name="DoExpressCheckoutPaymentResponseDetailsType.php"/>
+         <file role="php" name="DoExpressCheckoutPaymentResponseType.php"/>
+         <file role="php" name="DoReauthorizationRequestType.php"/>
+         <file role="php" name="DoReauthorizationResponseType.php"/>
+         <file role="php" name="DoVoidRequestType.php"/>
+         <file role="php" name="DoVoidResponseType.php"/>
+         <file role="php" name="ErrorParameterType.php"/>
+         <file role="php" name="ErrorType.php"/>
+         <file role="php" name="FaultDetailsType.php"/>
+         <file role="php" name="FeesType.php"/>
+         <file role="php" name="FeeType.php"/>
+         <file role="php" name="FlatShippingRateType.php"/>
+         <file role="php" name="GetExpressCheckoutDetailsRequestType.php"/>
+         <file role="php" name="GetExpressCheckoutDetailsResponseDetailsType.php"/>
+         <file role="php" name="GetExpressCheckoutDetailsResponseType.php"/>
+         <file role="php" name="GetTransactionDetailsRequestType.php"/>
+         <file role="php" name="GetTransactionDetailsResponseType.php"/>
+         <file role="php" name="ItemArrayType.php"/>
+         <file role="php" name="ItemType.php"/>
+         <file role="php" name="ListingDesignerType.php"/>
+         <file role="php" name="ListingDetailsType.php"/>
+         <file role="php" name="ListOfAttributeSetType.php"/>
+         <file role="php" name="MassPayRequestItemType.php"/>
+         <file role="php" name="MassPayRequestType.php"/>
+         <file role="php" name="MassPayResponseType.php"/>
+         <file role="php" name="MeasureType.php"/>
+         <file role="php" name="MerchantPullInfoType.php"/>
+         <file role="php" name="MerchantPullPaymentResponseType.php"/>
+         <file role="php" name="MerchantPullPaymentType.php"/>
+         <file role="php" name="ModifiedFieldType.php"/>
+         <file role="php" name="OptionType.php"/>
+         <file role="php" name="PaginationResultType.php"/>
+         <file role="php" name="PaginationType.php"/>
+         <file role="php" name="PayerInfoType.php"/>
+         <file role="php" name="PaymentDetailsItemType.php"/>
+         <file role="php" name="PaymentDetailsType.php"/>
+         <file role="php" name="PaymentInfoType.php"/>
+         <file role="php" name="PaymentItemInfoType.php"/>
+         <file role="php" name="PaymentItemType.php"/>
+         <file role="php" name="PaymentMeansType.php"/>
+         <file role="php" name="PaymentTransactionSearchResultType.php"/>
+         <file role="php" name="PaymentTransactionType.php"/>
+         <file role="php" name="PaymentType.php"/>
+         <file role="php" name="PersonNameType.php"/>
+         <file role="php" name="PromotedItemType.php"/>
+         <file role="php" name="QuantityType.php"/>
+         <file role="php" name="ReceiverInfoType.php"/>
+         <file role="php" name="RefundTransactionRequestType.php"/>
+         <file role="php" name="RefundTransactionResponseType.php"/>
+         <file role="php" name="ReviseStatusType.php"/>
+         <file role="php" name="SalesTaxType.php"/>
+         <file role="php" name="SchedulingInfoType.php"/>
+         <file role="php" name="SellerType.php"/>
+         <file role="php" name="SellingStatusType.php"/>
+         <file role="php" name="SetExpressCheckoutRequestDetailsType.php"/>
+         <file role="php" name="SetExpressCheckoutRequestType.php"/>
+         <file role="php" name="SetExpressCheckoutResponseType.php"/>
+         <file role="php" name="ShippingCarrierDetailsType.php"/>
+         <file role="php" name="ShippingDetailsType.php"/>
+         <file role="php" name="SiteHostedPictureType.php"/>
+         <file role="php" name="StorefrontType.php"/>
+         <file role="php" name="SubscriptionInfoType.php"/>
+         <file role="php" name="SubscriptionTermsType.php"/>
+         <file role="php" name="TransactionSearchRequestType.php"/>
+         <file role="php" name="TransactionSearchResponseType.php"/>
+         <file role="php" name="TransactionStatusType.php"/>
+         <file role="php" name="TransactionsType.php"/>
+         <file role="php" name="TransactionType.php"/>
+         <file role="php" name="UserIdPasswordType.php"/>
+         <file role="php" name="UserType.php"/>
+         <file role="php" name="ValType.php"/>
+         <file role="php" name="VATDetailsType.php"/>
+         <file role="php" name="VendorHostedPictureType.php"/>
+         <file role="php" name="XSDSimpleType.php"/>
+         <file role="php" name="XSDType.php"/>
+        </dir> <!-- PayPal/Type -->
+        <dir name="wsdl">
+         <file role="php" name="CoreComponentTypes.xsd"/>
+         <file role="php" name="eBLBaseComponents.xsd"/>
+         <file role="php" name="PayPalSvc.wsdl"/>
+         <file role="php" name="paypal-endpoints.php"/>
+         <file role="php" name="paypal-endpoints.xml"/>
+        </dir> <!-- PayPal/wsdl -->
+       </dir> <!-- PayPal -->
+       <file role="script" baseinstalldir="/" name="paypal-sdk-update">
+         <replace type="pear-config" from="@PHP-BIN@" to="php_bin"/>
+       </file>
+       <file role="script" baseinstalldir="/" platform="windows" name="paypal-sdk-update.bat">
+         <replace type="pear-config" from="@PHP-BIN@" to="php_bin"/>
+         <replace type="pear-config" from="@BIN-DIR@" to="bin_dir"/>
+       </file>
+       <file role="php" name="PayPal.php">
+         <replace type="package-info" from="@package_version@" to="version"/>
+       </file>
+      </dir> <!-- / -->
+    </filelist>
+  </release>
+  <changelog>
+    <release>
+      <version>0.0.1</version>
+      <date>2005-04-25</date>
+      <license>PHP License</license>
+      <state>beta</state>
+      <notes>Initial SDK release</notes>
+    </release>
+  </changelog>
+</package>

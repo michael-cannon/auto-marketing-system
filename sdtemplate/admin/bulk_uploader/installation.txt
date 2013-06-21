@@ -1,0 +1,70 @@
+BULK UPLOADER INSTALLATION INSTRUCTIONS
+
+
+1) Upload the files distribution into the admin folder, except for the "bulk_uploader.sql" file. Your
+software"s admin folder should now contain a "bulk_uploader" folder.
+
+2) Access the software"s database using phpMyAdmin. Open up the SQL page for your software"s database
+and "browse" the "bulk_uploader.sql" file on your pc, thereby running that query against your database.
+
+3) A "bulk uploader" link will now appear under the "Admin Tools & Settings" section of your Admin"s Front
+Page.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+BETA NOTES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The files distribution contains a file named "example_upload.txt", which you can use to upload a preliminary test
+prior to uploading a set of real data. It is "comma delimited"
+with an encapsulation using quotes (i.e. "). This is what you will enter in step 6.
+
+You will need to create a user to test this upload.
+
+You may also want to create various "category specific questions" and/or "site wide optional fields"
+because the "inventory.txt" file contains "year", "make", "model", etc. For testing purposes you can
+select not to use these fields in the frame that will display your uploaded file, but if you want
+them to use them, and have them show up in the ads, you will first need to create corresponding fields
+for each field we are giving you in the "inventory.txt" file.
+
+CRITICAL:
+	1) Make sure that:
+		-all of your image paths are correct
+		-all records contain the same number of fields/columns
+	2) Be careful not to select the same field in any dropdown that you have already used
+
+
+NON-CRITICAL:
+	1) Sometimes there will be no message that indicates the bulk upload is complete.
+	   No message also appears when there was a problem uploading.  You must manually
+	   verify that all records were uploaded by viewing the user"s listings.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+DATA FORMAT NOTES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Example 1:
+
+	"data 1-1","data 1-2","data 1-3"
+	"data 2-1","data 2-2","data 2-3"
+	"data 3-1","data 3-2","data 3-3"
+
+The encapsulating character is "
+The column delimiter is ,
+
+
+Example 2:
+
+	'data 1-1'|'data 1-2'|'data 1-3'
+	'data 2-1'|'data 2-2'|'data 2-3'
+	'data 3-1'|'data 3-2'|'data 3-3'
+
+The encapsulating character is '
+The column delimiter is |
+
+Note: Both examples use line breaks to delimit rows
+	
+
+	

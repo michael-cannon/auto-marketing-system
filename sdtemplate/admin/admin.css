@@ -1,0 +1,370 @@
+.admin_header_title {
+	background: #659ACC;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:16pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none}
+.admin_header {
+	background: #E3F5FF;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;}
+.admin_header_dropdown_row {
+	background: #659ACC;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000;
+	padding: 0.5em 0.5em 0.5em;
+	border-bottom: 0.1em;}
+.admin_header_dropdown {
+	background: #ffffff;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000;}
+.admin_header_misc {
+	background: #659ACC;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;}
+.admin_header_link {
+	background: #659ACC;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;}
+.admin_navigation_bar {
+	padding: 2;
+	background: #000000;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;}
+.menu_txt {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10pt;
+		font-style: normal;
+		line-height: normal;
+		font-weight: bold;
+		color: #000066;
+		text-decoration: none }
+.menu_txt2 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10pt;
+		font-style: normal;
+		line-height: normal;
+		font-weight: normal;
+		color: #000066;
+		text-decoration: none }
+.menu_bar_links {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: bold; font-variant: normal; color: 000066; text-decoration: none}
+A.menu_txt2 {color: #000066;}
+A.menu_txt2:link {color: #000066;}
+A.menu_txt2:hover { color:#000066; }
+A.menu_txt2:visited { color:#000066; }
+A.menu_txt2:active { color:#000066; }
+.stats_txt1 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; line-height: normal; font-weight: bold; font-variant: normal; text-transform: none; color: #ffffff; text-decoration: none}
+.stats_txt2 { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #333333; text-decoration: none }
+.stats_txt3 { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; line-height: normal; font-weight: bold; font-variant: normal; text-transform: none; color: #333333;}
+.copyright {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; color: #FFFFFF; font-weight: normal}
+A.stats_txt2 {color: #999999;}
+A.stats_txt2:hover {color:#999999;}
+A.stats_txt2:link {color:#333333;}
+A.stats_txt2:visited {color:#333333;}
+A.stats_txt3 {color: #999999;}
+A.stats_txt3:hover {color:#999999;}
+A.stats_txt3:link {color:#333333;}
+A.stats_txt3:visited {color:#333333;}
+.admin_mainbody {
+	background: #ffffff;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;}
+.admin_navigation_bar_links {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;}
+.admin_stats_header {
+	padding: 1em 0 0;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;}
+.admin_stats_label {
+	padding: 0.1em 0.5em 0;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:9pt; font-style:
+	normal;line-height: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: left;}
+.admin_stats_data {
+	padding: 0.1em 0.5em 0;
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:9pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;}
+p.link a:hover {background-color: #2B2E21;;color:#fff;}
+p.link a:link span{display: none;}
+p.link a:visited span{display: none;}
+p.link a:hover span {
+	position: absolute;
+	margin:15px 0px 0px 20px;
+	background-color: beige;
+	max-width:220;
+	padding: 2px 10px 2px 10px;
+	border: 1px solid #C0C0C0;
+	font: normal 10px/12px verdana;
+	color: #000;
+	text-align:left;
+	display: block;}
+.extremely_large_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:18pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000; }
+.very_large_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:16pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000; }
+.large_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000; }
+.medium_error_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #880000; }
+.medium_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000; }
+.small_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:7pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000; }
+.small_font_error {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:7pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #880000; }
+.very_large_font_light {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:16pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #FFFFFF; }
+.very_large_font_light {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:16pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #FFFFFF; }
+.large_font_light {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:12pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #FFFFFF; }
+.medium_font_light {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #FFFFFF; }
+.small_font_light {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:7pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #FFFFFF; }
+.search_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000; }
+.link_font {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:10pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #006600; }
+.tag_verify {
+	font-family: Arial,Helvetica, sans-serif;
+	font-size:8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000066; }
+.row_color_black{
+	background: #659ACC; }
+.row_color_red{
+	background: #659ACC; }
+.row_color1{
+	background: #ffffff; }
+.row_color2{
+	background: #f0faff; }
+.row_color3{
+	background: #bbbbbb; }
+.footer_text{
+		font-family: Arial, Helvetica;
+		font-size: 10pt;
+		color: #FFFFFF; }
+A.footer_text:hover { color:#FFFFFF; }
+A.footer_text:link span{ color:#FFFFFF; }
+
+.pg_title1 {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: bold; color: #000066}
+.pg_title2 { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: bold; color: #000066 }
+.pg_dtls {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; font-variant: normal; color: #000066; text-decoration: none}
+.pg_dtls2 {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: bold; font-variant: normal; color: #000066; text-decoration: none}
+
+.DynamicTree {
+    font-family: arial, helvetica;
+    font-size: 11px;
+    white-space: nowrap;
+    cursor: default;
+}
+.DynamicTree .doc img	{ border: 0; vertical-align: -4px; }
+.DynamicTree .folder img { border: 0; vertical-align: -4px; }
+* html .DynamicTree .doc img	{ border: 0; vertical-align: middle; vertical-align: -4px; }
+* html .DynamicTree .folder img { border: 0; vertical-align: middle; vertical-align: -4px; }
+.DynamicTree .section { background: url(admin_images/tree-branch.gif) repeat-y; display: none; }
+.DynamicTree .last { background: none; }
+.DynamicTree .folder .folder { margin-left: 18px; }
+.DynamicTree .doc .doc, .DynamicTree .folder .doc { margin-left: 18px; }
+
+.DynamicTree .folder .folder a { color: #000000; text-decoration: none; }
+.DynamicTree .folder .folder a:hover { color: #000000; text-decoration: underline; }
+
+.DynamicTree .folder .doc a { color: #000000; text-decoration: none; }
+.DynamicTree .folder .doc a:hover { color: #000000; text-decoration: underline; }
+
+.DynamicTree .text { padding: 1px; }
+.DynamicTree .text-active { background: #CEE3FF;  padding: 1px; }
+
+/* hack for IE to fix a bug (background of .section disappearing when mouse is over a link, for example Node 1.1.1.1) */
+* html .DynamicTree .doc { position: relative; }
+* html .DynamicTree .doc a { position: absolute; top: 3px; }
+
+.DynamicTree img { border: 0; }
+
+.DynamicTree .actions {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+}
+.DynamicTree .tooltip {
+    position: absolute;
+    line-height: 22px;
+    left: 185px;
+}
+.DynamicTree .moveUp,
+.DynamicTree .moveDown,
+.DynamicTree .moveLeft,
+.DynamicTree .moveRight,
+.DynamicTree .insert,
+.DynamicTree .info,
+.DynamicTree .remove {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    border: 1px solid #F1EFE2;
+    z-index: 5;
+    cursor: default;
+}
+.DynamicTree .moveUp:hover,
+.DynamicTree .moveDown:hover,
+.DynamicTree .moveLeft:hover,
+.DynamicTree .moveRight:hover,
+.DynamicTree .insert:hover,
+.DynamicTree .info:hover,
+.DynamicTree .remove:hover {
+    background-color: #ffffff;
+    border: 1px solid #ACA899;
+}
+.DynamicTree .moveUp { left: 0px; }
+.DynamicTree .moveDown { left: 25px; }
+.DynamicTree .moveLeft { left: 50px; }
+.DynamicTree .moveRight { left: 75px; }
+.DynamicTree .insert { left: 100px; }
+.DynamicTree .info { left: 125px; }
+.DynamicTree .remove { left: 150px; }
+
+.DynamicTree .wrap { margin-left: 2px; }
+.DynamicTree .top { background: url(admin_images/tree.gif) no-repeat; padding-left: 25px; line-height: 20px; color: #333333; }
+.DynamicTree .top a { color: #000000; text-decoration: none; }
+.DynamicTree .top a:hover { color: #000000; text-decoration: underline; }
+.DynamicTree .wrap1 { background: #ffffff; padding: 10px; border: 1px solid #919B9C; width: 250px; }
+.DynamicTree .wrap2 { margin-left: 2px; }
+
+.DynamicTree #tree-insert-form { display: none; margin-top: 1em; }
+.DynamicTree #tree-insert-form .label { text-align: right; width: 50px; padding-right: 8px; }
+.DynamicTree #tree-insert-form .input { margin-bottom: 2px; padding-left: 3px; }
+.DynamicTree #tree-insert-form select { margin-bottom: 2px; }
+.DynamicTree #tree-insert-form .button { margin-top: 4px; }
+
+.DynamicTree #tree-info-form { display: none; margin-top: 1em; }
+.DynamicTree #tree-info-form .label { text-align: right; width: 50px; padding-right: 8px; }
+.DynamicTree #tree-info-form .input { margin-bottom: 2px; padding-left: 3px; }
+.DynamicTree #tree-info-form select { margin-bottom: 2px; }
+.DynamicTree #tree-info-form .button { margin-top: 4px; }

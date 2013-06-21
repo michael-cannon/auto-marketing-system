@@ -1,0 +1,22 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class RefundTransactionTest extends CallerServicesBase
+{
+    function testRefund()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $rtrt =& Services_PayPal::getType('RefundTransactionRequestType');
+        $rtrt->setTransactionId('0123456789');
+
+        $response = $this->caller->RefundTransaction($rtrt);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'RefundTransactionResponseType'), "Response is not the correct type.");
+    }
+
+}

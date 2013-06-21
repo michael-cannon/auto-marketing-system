@@ -1,0 +1,33 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class MassPayTest extends CallerServicesBase
+{
+    function testPay()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $amount =& Services_PayPal::getType('BasicAmountType');
+        $amount->setval(0.5);
+        $amount->setattr('currencyID', 'USD');
+
+        $mprit =& Services_PayPal::getType('MassPayRequestItemType');
+        $mprit->setReceiverEmail('sdk-buyer@sdk.com');
+        $mprit->setAmount($amount);
+
+        $mp =& Services_PayPal::getType('MassPayRequestType');
+        $mp->setMassPayItem($mprit);
+        $mp->setEmailSubject('test payment');
+
+        $response = $this->caller->MassPay($mp);
+        if (Services_PayPal::isError($response)) {
+            return $this->fail("Got back an error, perhaps a SOAP Fault: " . $response->getMessage());
+        }
+
+        $this->assertTrue(is_a($response, 'MassPayResponseType'), "Response is not the correct type.");
+    }
+
+}

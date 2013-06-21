@@ -1,0 +1,166 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #dcdcdc; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; COLOR: #333333; SCROLLBAR-3DLIGHT-COLOR: #bbbbbb; SCROLLBAR-ARROW-COLOR: #626262; SCROLLBAR-TRACK-COLOR: #efefef; FONT-FAMILY: Verdana, Tahoma, sans-serif; SCROLLBAR-DARKSHADOW-COLOR: #bbbbbb
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial, Verdana,Tahoma
+}
+UL {
+	PADDING-LEFT: 20px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px
+}
+LI {
+	FONT-SIZE: 100%; COLOR: #666666; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Tahoma, sans-serif
+}
+
+table th
+    {
+        align: center;
+        height: 26;
+        background-color: #d6e2ef;
+		background-image: url('/cp/img/bgTh.gif');
+        background-position:middle center;
+    }
+
+TR.over {
+	BACKGROUND-COLOR: #ecf4fc
+}
+TR.over1 {
+	BACKGROUND-COLOR: #fac31c
+}
+TR.out {
+	BACKGROUND-COLOR: #eeeeee
+}
+TR.over_1 {
+	BACKGROUND-COLOR: #ecf4fc
+}
+TR.out_1 {
+	BACKGROUND-COLOR: #ffffff
+}
+TD.justify {
+	TEXT-ALIGN: justify
+}
+A {
+	COLOR: #6792c9;
+}
+A:hover {
+	COLOR: #ff9900; TEXT-DECORATION: underline
+}
+DIV A {
+	FONT-SIZE: 10px; COLOR: #6792c9; TEXT-DECORATION: none
+}
+DIV A:hover {
+	FONT-SIZE: 10px; COLOR: #333333; TEXT-DECORATION: none
+}
+A.menu {
+	FONT-SIZE: 12px; COLOR: #999999; TEXT-DECORATION: none
+}
+A.menu:hover {
+	FONT-SIZE: 12px; COLOR: #ff6622; TEXT-DECORATION: none
+}
+A.news {
+	COLOR: #6792c9; TEXT-DECORATION: underline
+}
+A.news:hover {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+A.bnews {
+	FONT-SIZE: 9px; COLOR: #000000; TEXT-DECORATION: underline
+}
+A.bnews:hover {
+	FONT-SIZE: 9px; COLOR: #000000; TEXT-DECORATION: underline
+}
+A.menu1 {
+	FONT-SIZE: 11px; COLOR: #6792c9; TEXT-DECORATION: none
+}
+A.menu1:hover {
+	FONT-SIZE: 11px; COLOR: #6792c9; TEXT-DECORATION: underline
+}
+A.reg {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Georgia, "Times New Roman", Times, serif; TEXT-DECORATION: none
+}
+A.reg:hover {
+	FONT-SIZE: 12px; COLOR: #0077cc; FONT-FAMILY: Georgia, "Times New Roman", Times, serif; TEXT-DECORATION: underline
+}
+A.orang {
+	FONT-SIZE: 12px; COLOR: #ff6600; TEXT-DECORATION: none
+}
+A.orang:hover {
+	FONT-SIZE: 12px; COLOR: #666666; TEXT-DECORATION: none
+}
+A.white {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.white:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.blue_middle {
+	FONT-SIZE: 14px; COLOR: #0077cc; TEXT-DECORATION: none
+}
+A.blue_middle:hover {
+	FONT-SIZE: 14px; COLOR: #ff6600; TEXT-DECORATION: none
+}
+FORM {
+	MARGIN-BOTTOM: 0px
+}
+INPUT {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 9px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: arial, helvetica, sans-serif
+}
+INPUT.reg {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 9px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: arial, helvetica, sans-serif
+}
+SELECT {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.text_blue_1 {
+	FONT-SIZE: 11px; COLOR: #0077cc
+}
+.text_brown {
+	COLOR: #999999
+}
+.text_blue {
+	FONT-SIZE: 100%; COLOR: #4d8ccc; FONT-FAMILY: Verdana, Tahoma, sans-serif
+}
+.text_white {
+	COLOR: #eeeeee
+}
+.text_bold_red {
+	color: #ff0000;
+	font-weight: bold;
+}
+.menu {
+	FONT-SIZE: 11px; COLOR: #6792c9; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.menu1 {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.big_text {
+	FONT-SIZE: 16px; COLOR: #585858; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.big_black {
+	FONT-SIZE: 18px; COLOR: #000000; FONT-FAMILY: Helvetica, Verdana, Arial, sans-serif
+}
+.text_blue_big {
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #ff6622; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.text_black_small {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Georgia, "Times New Roman", Times, serif
+}
+.orange {
+	FONT-SIZE: 16px; COLOR: #ff9900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.table1 {
+	BORDER-RIGHT: #cccccc 3px solid; BORDER-TOP: #cccccc 3px solid; BORDER-LEFT: #cccccc 3px solid; BORDER-BOTTOM: #cccccc 3px solid
+}
+.date {
+	FONT-WEIGHT: bold; COLOR: #ff6622
+}
+H1 {
+	FONT-SIZE: 22px; MARGIN: 0px; COLOR: #ff6622; LINE-HEIGHT: 22px; FONT-FAMILY: 'Helvetica CY', 'Arial Narrow', Arial, sans-serif
+}
+
+.menu_info_text {
+	font-size: 12px; color: #777777;
+}
+
+img {
+	border: 0;
+}

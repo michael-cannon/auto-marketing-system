@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+<RequesterCredentials xmlns="urn:ebay:api:PayPalAPI" soapenv:actor="http://schemas.xmlsoap.org/soap/actor/next" soapenv:mustUnderstand="1">
+<ebl:Credentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents">
+<ebl:Username>**apiusername**</ebl:Username>
+<ebl:Password>**apipassword**</ebl:Password>
+<ebl:Subject/>
+</ebl:Credentials>
+</RequesterCredentials>
+</soapenv:Header>
+<soapenv:Body>
+<MassPayReq xmlns="urn:ebay:api:PayPalAPI">
+<MassPayRequest>
+<ns1:Version xmlns:ns1="urn:ebay:apis:eBLBaseComponents">1.00</ns1:Version>
+<EmailSubject>Test MassPay from SDK</EmailSubject>
+<MassPayItem>
+<ReceiverEmail>sdk-buyer@sdk.com</ReceiverEmail>
+<amount currencyID="USD">1.00</Amount>
+<Note>This a test masspay from sdk-seller@sdk.com</Note>
+</MassPayItem>
+</MassPayRequest>
+</MassPayReq>
+</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,79 @@
+.rteTextarea
+{
+}
+.rteImage
+{
+    background: #D2E0EE url(../images/gui_images/silver/silver.png) repeat-x;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    cursor: pointer;
+    cursor: hand;
+    margin: 1px;
+}
+.rteSource
+{
+    background: url(../images/gui_images/silver/silver_bg2.png) repeat-x;
+    border: 0px solid #679AC9;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 2px;
+    text-align: left;
+    width: 100%;
+}
+.rteSourceText
+{
+    font-family: verdana,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+.rteImageRaised
+{
+    background: #eee;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    cursor: hand;
+    margin: 1px;
+}
+.imageOff
+{
+    background: #eee;
+    border: 1px solid #bbb;
+    margin: 1px;
+    filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+.rteImageLowered
+{
+    background: #fff;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    cursor: hand;
+    margin: 1px;
+}
+.rteVertSep
+{
+    margin: 0 2px 0 2px;
+    background: url(../images/gui_images/silver/silver_dot.gif) no-repeat;
+    width: 3px;
+    height: 20px;
+}
+.rteBack
+{
+    border-bottom: 1px solid #aaa;
+    padding: 0px;
+}
+.rteBack tbody tr td, .rteBack tr td
+{
+    padding: 0;
+}
+.rteSelect
+{
+    font-size: 11px;
+    font-family: verdana,sans-serif;
+}

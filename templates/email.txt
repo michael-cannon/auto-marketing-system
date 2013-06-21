@@ -1,0 +1,23 @@
+###SALE_DEALER###: Inventory Now Online; Hottest Vehicles in ###SALE_CITY###
+###FIRSTNAME###,
+
+This is news so hot, we just had to tell you immediately.
+
+###SALE_DEALER### upcoming Super Sale inventory is now online for you to view.
+
+If you see something that you like, you better get down to the dealership soon
+or else it might be sold before you know it.
+
+Don't forget the sale is ###SALE_DATE###.
+
+<a href="###URL###">Click here</a>, ###URL###, to be taken straight to the best inventory in and around ###SALE_CITY###. You'll need the following login credentials to view inventory
+
+Username: ###USERNAME###
+Password: ###PASSWORD###
+
+If you've got questions, call me Tyler at 1-866-895-0517 Ext.6.
+
+Thanks for logging on to the hottest sale of the summer.
+
+Tyler Stokes
+1-866-895-0517 Ext.6

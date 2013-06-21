@@ -1,0 +1,22 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class GetTransactionDetailsTest extends CallerServicesBase
+{
+    function testGetDetails()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $d =& Services_PayPal::getType('GetTransactionDetailsRequestType');
+        $d->setTransactionId('16Y927061V203442U');
+
+        $response = $this->caller->GetTransactionDetails($d);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'GetTransactionDetailsResponseType'), "Response is not the correct type.");
+    }
+
+}

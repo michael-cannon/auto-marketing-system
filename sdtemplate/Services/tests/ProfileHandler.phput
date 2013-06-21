@@ -1,0 +1,14 @@
+<?php
+
+require_once 'Services/PayPal/Profile/Handler/File.php';
+
+class ProfileHandlerTest extends PHPUnit_TestCase
+{
+    var $inst;
+
+    function ProfileHandlerTest($name)
+    {
+        parent::PHPUnit_TestCase($name);
+    }
+
+}

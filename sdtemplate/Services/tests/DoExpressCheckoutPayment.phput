@@ -1,0 +1,35 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class DoExpressCheckoutPaymentTest extends CallerServicesBase
+{
+    function testExpressCheckoutPayment()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $amount =& Services_PayPal::getType('BasicAmountType');
+        $amount->setval(100);
+        $amount->setattr('currencyID', 'USD');
+
+        $pdt =& Services_PayPal::getType('PaymentDetailsType');
+        $pdt->setOrderTotal($amount);
+
+        $details =& Services_PayPal::getType('DoExpressCheckoutPaymentRequestDetailsType');
+        $details->setPaymentAction('Sale');
+        $details->setToken('checkouttoken');
+        $details->setPayerID('sdk-buyer@sdk.com');
+        $details->setPaymentDetails($pdt);
+
+        $ecprt =& Services_PayPal::getType('DoExpressCheckoutPaymentRequestType');
+        $ecprt->setDoExpressCheckoutPaymentRequestDetails($details);
+
+        $response = $this->caller->DoExpressCheckoutPayment($ecprt);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'DoExpressCheckoutPaymentResponseType'), "Response is not the correct type.");
+    }
+
+}

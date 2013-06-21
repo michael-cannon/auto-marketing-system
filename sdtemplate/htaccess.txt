@@ -1,0 +1,131 @@
+##################### REWRITE RULES #####################
+
+Options +FollowSymlinks
+
+RewriteEngine On
+RewriteBase /gca/
+
+RewriteRule ^/?([^/]*)/listings/page([0-9]*)\.htm$ $1.php?a=2&b=$2 [L]
+RewriteRule ^/?([^/]*)/listings/category([0-9]*)\.htm$ $1.php?a=5&b=$2 [L]
+RewriteRule ^/?([^/]*)/listings/category([0-9]*)/page([0-9]*)\.htm$ $1.php?a=5&b=$2&page=$3 [L]
+RewriteRule ^/?([^/]*)/other/seller([0-9]*)\.htm$ $1.php?a=6&b=$2 [L]
+RewriteRule ^/?([^/]*)/other/seller([0-9]*)/page([0-9]*)\.htm$ $1.php?a=6&b=$2&page=$3 [L]
+RewriteRule ^/?([^/]*)/featured/category([0-9]*)\.htm$ $1.php?a=8&b=$2 [L]
+RewriteRule ^/?([^/]*)/featured/category([0-9]*)/page([0-9]*)\.htm$ $1.php?a=8&b=$2&page=$3 [L]
+RewriteRule ^/?([^/]*)/listings/1day([0-9]*)\.htm$ $1.php?a=11&b=$2&c=4 [L]
+RewriteRule ^/?([^/]*)/listings/1day([0-9]*)/page([0-9]*)\.htm$ $1.php?a=11&b=$2&c=4&page=$3 [L]
+RewriteRule ^/?([^/]*)/listings/1week([0-9]*)\.htm$ $1.php?a=11&b=$2&c=1 [L]
+RewriteRule ^/?([^/]*)/listings/1week([0-9]*)/page([0-9]*)\.htm$ $1.php?a=11&b=$2&c=1&page=$3 [L]
+RewriteRule ^/?([^/]*)/listings/2weeks([0-9]*)\.htm$ $1.php?a=11&b=$2&c=2 [L]
+RewriteRule ^/?([^/]*)/listings/2weeks([0-9]*)/page([0-9]*)\.htm$ $1.php?a=11&b=$2&c=2&page=$3 [L]
+RewriteRule ^/?([^/]*)/listings/3weeks([0-9]*)\.htm$ $1.php?a=11&b=$2&c=3 [L]
+RewriteRule ^/?([^/]*)/listings/3weeks([0-9]*)/page([0-9]*)\.htm$ $1.php?a=11&b=$2&c=3&page=$3 [L]
+RewriteRule ^/?([^/]*)/print/item([0-9]*)\.htm$ $1.php?a=14&b=$2 [L]
+RewriteRule ^/?([^/]*)/images/item([0-9]*)\.htm$ $1.php?a=15&b=$2 [L]
+
+##################### REQUIRED TO ACTIVATE #####################
+
+#GEO ADMIN INSTRUCTIONS:
+#
+# 1. <base href=""> tag must be added inside of the <head> tags in ALL of your templates
+# 2. Example: <base href="http://www.mysite.com/"> or <base href="http://www.mysite.com/myGeoProduct">
+#	Note: If you are using https on any pages of your site the base href tag needs https (Ex: <base href="https://www.mysite.com/myGeoProduct">)
+# 3. Turn on the switch for rewrite urls inside Browsing Settings
+# 4. Change RewriteBase to your product's directory(Note: This setting is at the top of this page)
+# 5. Example RewriteBase / or /myGeoProduct(Note: Default assumes your installation is at the root of your domain and can be left as is)
+# 6. Save this file as a .htaccess file and upload it. Currently it is set as a text file so remove the .txt and save as .htaccess and upload.
+#
+#APACHE INSTRUCTIONS: (Note: We do not support modifications to APACHE...
+# 	if you are unsure of the below contact your host as they can help 
+#	with your installation of APACHE)
+#
+# 1. Make sure AllowOverride is set to "All" or "FileInfo" in httpd.conf
+# 2. Htaccess has to be allowed
+# 3. Uncomment LoadModule rewrite_module modules/mod_rewrite.so in httpd.conf
+#
+# Further Documentation
+# http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html
+# http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html
+
+
+##################### ADVANCED EDITING #####################
+
+# If you wish to change the default URLs you must change the above RewriteRules
+# and change the formatUrls() function inside of site_class.php located your classes directory
+# 
+# Explanation:
+# RewriteRule ^/?([^/]*)/listings/page([0-9]*)\.htm$ $1.php?a=2&b=$2 [L]
+#                |-----| |------| |---|
+#                   ^        ^      ^
+#                   |        |      |
+#                index file  |      |
+#                            |      |
+#                        "a" value  |
+#                                   |
+#                                "b" value
+#
+# to change the "listings" folder to "myListings" and the
+# "page" file to "aListing" you would change the RewriteRule to
+# RewriteRule ^/?([^/]*)/myListings/aListing/([0-9]*)\.htm$ $1.php?a=2&b=$2 [L]
+#
+# then edit the formatUrls() function so that the switch at case "a"
+# when a = 2 sets $newUrl .= "myListings" and the switch at case "b"
+# when a = 2 sets $newUrl .= "aListing"
+#
+# Example:
+#case "a";
+#	$a = $urlGetVariableValues[1];
+#	switch($urlGetVariableValues[1])
+#	{
+#		case 2:
+#			$newUrl .= "/myListings";   <--EDITED
+#		break;
+#		case 5:
+#			$newUrl .= "/listings";
+#		break;
+#		case 6:
+#			$newUrl .= "/other";
+#		break;
+#		case 8:
+#			$newUrl .= "/featured";
+#		break;
+#		case 11:
+#			$newUrl .= "/listings";
+#		break;
+#		case 14:
+#			$newUrl .= "/print";
+#		break;
+#		case 15:
+#			$newUrl .= "/images";
+#		break;
+#		default:
+#			return "href=\"".$string."\" ".$endUrl;
+#		break;
+#	}
+#break;
+#case "b":
+#	switch($a)
+#	{
+#		case 2:
+#			$newUrl .= "/aListing".$urlGetVariableValues[1];   <--EDITED
+#		break;
+#		case 5:
+#			$newUrl .= "/category".$urlGetVariableValues[1];
+#		break;
+#		case 6:
+#			$newUrl .= "/seller".$urlGetVariableValues[1];
+#		break;
+#		case 8:
+#			$newUrl .= "/category".$urlGetVariableValues[1];
+#		break;
+#		case 11:
+#			$newUrl .= "/category".$urlGetVariableValues[1];
+#		break;
+#		case 14:
+#			$newUrl .= "/item";
+#		break;
+#		case 15:
+#			$newUrl .= "/item";
+#		break;
+#	}
+#break;

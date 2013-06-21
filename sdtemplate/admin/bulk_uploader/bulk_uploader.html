@@ -1,0 +1,32 @@
+<SCRIPT language="javascript">
+// Set title and text for tooltip
+Text[1] = ["Choose a Saved Profile", "If you have saved a profile from an earlier bulk uploading session you can restore all of your settings by choosing the profile from below."];
+Text[2] = ["Choose a User", "Type in either the user id or the username of the user that will be the seller of your listings.  When one is entered correctly the other will populate."];
+Text[3] = ["Choose a Category", "This is the category that your listings will be inserted into."];
+Text[4] = ["Choose a Listing Type", "Choose what kind of listings you will be uploading."];
+Text[5] = ["Choose a Save Location", "If you wish to save the file you uploaded on your server check below and enter the COMPLETE path to where it will be saved."];
+Text[6] = ["Input a Delimeter and an Encapsulation String", "A delimeter is the character or characters that are used to break up elements of your data this is commonly a tab or a comma.  Encapsulation characters are the characters that represent the beginning and end of a piece of data, these are commonly single or double quotes.  The encapsulating character can not be a backslash."];
+Text[7] = ["Upload your file", "When all the rest of the elements of this form have been completed click the button below and a box will appear allowing you to upload your data file."];
+
+Style[1]=["white","#000099","","","",,"black","#e8e8ff","","","",,,,2,"#000099",2,,,,,"",3,,,];
+var TipId = "tiplayer";
+var FiltersEnabled = 1;
+mig_clay();
+</SCRIPT>
+<<UNDO_BLOCK>>
+<TABLE width="100%"><tr><td class="bulk_title_cell"><input name="action_choice" type="radio" onclick="showHideField('bulk_uploader_hidden', 'undo_hidden_row');">Perform a Bulk Upload</td></tr></TABLE>
+<div id="bulk_uploader_hidden" style="display:none">
+<form id="bulk_form" action="index.php?a=200&action=upload" method="POST" enctype="multipart/form-data" onsubmit="return CheckPage1();">
+<TABLE class="outer_table">
+<tr><td><<CHOOSE_PROFILE_BLOCK>>
+<<CHOOSE_USER_BLOCK>>
+<<CHOOSE_CATEGORY_BLOCK>>
+<!-- The step table is in the code.  This is due to the conditional nature of it -->
+<<CHOOSE_TYPE_BLOCK>>
+<!-- The step table is in the code.  This is due to the conditional nature of it -->
+<<FILE_PARTS>>
+<!-- The step table is in the code.  This is due to the conditional nature of it -->
+<<CHOOSE_FILE_BLOCK>></td></tr>
+</TABLE>
+</form>
+</div>

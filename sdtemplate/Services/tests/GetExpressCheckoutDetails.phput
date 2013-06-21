@@ -1,0 +1,22 @@
+<?php
+
+require_once dirname(__FILE__) . '/CallerServicesBase.php';
+
+class GetExpressCheckoutDetailsTest extends CallerServicesBase
+{
+    function testGetECDetails()
+    {
+        if (Services_PayPal::isError($this->caller)) {
+            return $this->fail("Failed to instantiate CallerServices: " . $this->caller->getMessage());
+        }
+
+        $ecd =& Services_PayPal::getType('GetExpressCheckoutDetailsRequestType');
+        $ecd->setToken('0123456789');
+
+        $response = $this->caller->GetExpressCheckoutDetails($ecd);
+
+	    $this->assertFalse(Services_PayPal::isError($response), "Got back an error, perhaps a SOAP Fault.");
+        $this->assertTrue(is_a($response, 'GetExpressCheckoutDetailsResponseType'), "Response is not the correct type.");
+    }
+
+}

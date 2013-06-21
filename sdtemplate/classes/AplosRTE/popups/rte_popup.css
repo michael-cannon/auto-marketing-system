@@ -1,0 +1,15 @@
+body{padding:0px;margin:0px;background:buttonface;}
+.button,legend{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;}
+.popup{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;text-align:right;}
+.popup200{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:200px;}
+.popup205{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:205px;}
+.popup150{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:150px;}
+.popup80{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:80px;}
+.popup60{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:55px;}
+.popup50{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:50px;}
+.popup40{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;width:44px;}
+p{text-align:center;}
+form{padding-top:10px;text-align:center;}
+.character{font-family: verdana,sans-serif;font-size:13px;font-weight: normal;text-align:center;padding-left:2px;border:1px solid #aaa;white-space:nowrap;background:#fff;width:10%;cursor:pointer;}
+.date{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;background:#fff;cursor:pointer;padding:1px;}
+.input{font-family:verdana,helvetica,sans-serif;font-weight:normal;font-size:11px;}

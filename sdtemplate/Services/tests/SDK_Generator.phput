@@ -1,0 +1,91 @@
+<?php
+
+require_once 'Services/PayPal/SDK/Generator.php';
+
+class SDK_GeneratorTest extends PHPUnit_TestCase
+{
+    var $generator;
+
+    function SDK_GeneratorTest($name)
+    {
+        $this->generator =& new PayPal_SDK_Generator();
+        parent::PHPUnit_TestCase($name);
+    }
+
+    function testBuildEndpointMap()
+    {
+        $bad = $this->generator->buildEndpointMap('/non/existing/path.xml');
+        $this->assertTrue(Services_PayPal::isError($bad),
+                          "Should thrown an error if the endpoint XML does not exist.");
+
+        $map = $this->generator->buildEndpointMap();
+        $this->assertFalse(Services_PayPal::isError($map),
+                           "Generation of endpoint map failed: " . (is_object($map) ? $map->getMessage() : ''));
+
+        eval('?>' . $map);
+        $this->assertTrue(isset($PayPalEndpoints),
+                          "Expected \$PayPalEndpoints variable not found in generated map.");
+
+        $generated = isset($PayPalEndpoints) ? $PayPalEndpoints : null;
+        include 'Services/PayPal/wsdl/paypal-endpoints.php';
+        $this->assertEquals(serialize($generated), serialize($PayPalEndpoints),
+                            "Generated endpoint map does not match existing SDK endpoint map.");
+    }
+
+    function testBuildMethods()
+    {
+        $methods = $this->generator->buildMethods();
+        $this->assertFalse(Services_PayPal::isError($methods),
+                           "Generation of methods failed: " . (is_object($methods) ? $methods->getMessage() : ""));
+
+        $code = 'class TestAPI { ' . $methods . ' }';
+        eval($code);
+        $this->assertTrue(class_exists('TestAPI'),
+                          "Failed to eval generated code");
+
+        $caller =& new TestAPI();
+
+        $this->assertTrue(method_exists($caller, 'RefundTransaction'),
+                          "Expected method RefundTransaction not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'GetTransactionDetails'),
+                          "Expected method GetTransactionDetails not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'BillUser'),
+                          "Expected method BillUser not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'TransactionSearch'),
+                          "Expected method TransactionSearch not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'MassPay'),
+                          "Expected method MassPay not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'BillAgreementUpdate'),
+                          "Expected method  not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'AddressVerify'),
+                          "Expected method AddressVerify not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'DoExpressCheckoutPayment'),
+                          "Expected method DoExpressCheckoutPayment not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'SetExpressCheckout'),
+                          "Expected method SetExpressCheckout not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'GetExpressCheckoutDetails'),
+                          "Expected method GetExpressCheckoutDetails not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'DoDirectPayment'),
+                          "Expected method DoDirectPayment not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'DoCapture'),
+                          "Expected method DoCapture not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'DoReauthorization'),
+                          "Expected method DoReauthorization not found in generated API");
+
+        $this->assertTrue(method_exists($caller, 'DoVoid'),
+                          "Expected method DoVoid not found in generated API");
+    }
+
+}

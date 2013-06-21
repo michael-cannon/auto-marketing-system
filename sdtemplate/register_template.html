@@ -1,0 +1,77 @@
+<html>
+<head>
+<title><MODULE_TITLE> Register</title>
+<base href="http://@SUBDOMAIN@.Movingiron.com/" />
+<<CSSSTYLESHEET>>
+<link href="geostyle.css" rel="stylesheet" type="text/css">
+
+<script language="JavaScript">
+    var showDateShort = 1;
+    var showDate= 2;
+    var showDateTime= 3;
+    var showTime= 4;
+
+    function ShowDateTime(dateStyle)
+    {
+        var today = new Date();
+        var dStr = "";
+
+        switch (dateStyle)
+        {
+            case showDateShort:
+                dStr = today.toDateString();
+                break;
+            case showDateTime:
+                dStr = today.toLocaleString();
+                break;
+            case showTime:
+                dStr = today.toLocaleTimeString();
+                break;
+            case showDate:
+            default:
+                dStr = today.toLocaleDateString();
+                break;
+        }
+        document.write(dStr);
+    }
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<div class="bodytable">
+<!-- BEGIN TOP MENU BAR - CHANGE THIS HTML IN THE MODULES AREA OF THE ADMIN -->
+<<LOGGED_IN_OUT_HTML_2>>
+<!-- END TOP MENU BAR -->
+
+<!-- BEGIN HEADER - CHANGE THIS HTML IN THE MODULES AREA OF THE ADMIN -->
+<<LOGGED_IN_OUT_HTML>>
+<!-- END HEADER -->
+
+<!-- BEGIN SUBMENU BAR - CHANGE THIS HTML IN THE MODULES AREA OF THE ADMIN -->
+<<LOGGED_IN_OUT_HTML_3>>
+<!-- END SUBMENU BAR -->
+
+  <!# MAIN 3 COLUMN BODY TABLE START-->
+
+   <table class="maintable">
+    <tr valign="top">
+    <td class="centercolumn">
+    <!# CENTER COLUMN - MAIN TABLE START-->
+    <center><!--@VIDEO_2@--></center>
+<div align="center">
+<<LOGGED_IN_OUT_HTML_10>>
+<<MAINBODY>>
+</div>
+    <!# CENTER COLUMN - MAIN TABLE END-->
+    </td>
+
+    </tr>
+   </table>
+  <!# MAIN 3 COLUMN BODY TABLE END-->
+
+<<LOGGED_IN_OUT_HTML_8>>
+</div>
+
+
+</body>
+</html>

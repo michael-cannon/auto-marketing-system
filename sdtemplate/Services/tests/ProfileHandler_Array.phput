@@ -1,0 +1,69 @@
+<?php
+
+require_once 'Services/PayPal.php';
+require_once 'Services/PayPal/Profile/Handler/Array.php';
+
+class ProfileHandler_ArrayTest extends PHPUnit_TestCase
+{
+    var $inst;
+    var $data = array('foo' => 'bar',
+                      'something' => 'else',
+                      'integer' => 42);
+
+    function ProfileHandler_ArrayTest($name)
+    {
+        parent::PHPUnit_TestCase($name);
+    }
+
+    function testSaveData()
+    {
+        $data = array('foo' => 'bar',
+                      10 => 20);
+
+        $inst =& ProfileHandler_Array::getInstance($data);
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "ProfileHandler_Array failed to return a valid instance");
+
+        $id = $inst->saveProfile($data);
+
+        $this->assertFalse(Services_PayPal::isError($id),
+                           "ProfileHandler_Array failed to save the profile and return a valid id");
+
+        $result = $inst->deleteProfile($id);
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "ProfileHandler_Array failed to delete the profile with id '$id': ");
+    }
+
+    function testLoadData()
+    {
+        $data = array('foo' => 'bar',
+                      10 => 20);
+
+        $inst =& ProfileHandler_Array::getInstance($data);
+
+        $this->assertFalse(Services_PayPal::isError($inst),
+                           "ProfileHandler_Array failed to return a valid instance: ");
+
+        $id = $inst->saveProfile($data);
+
+        $this->assertFalse(Services_PayPal::isError($id),
+                           "ProfileHandler_Array failed to save the profile and return a valid id:");
+
+        $newdata = $inst->loadProfile($id);
+
+        $this->assertFalse(Services_PayPal::isError($newdata),
+                           "Loading of profile data failed: ");
+
+        $this->assertTrue((is_array($newdata) && isset($newdata['foo'])),
+                          "Loading of profile data did not return expected data.");
+
+        $result = $inst->deleteProfile($id);
+
+        $this->assertFalse(Services_PayPal::isError($result),
+                           "ProfileHandler_Array failed to delete the profile with id '$id': ");
+
+    }
+
+}

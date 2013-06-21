@@ -1,0 +1,465 @@
+/* CSS Document */
+body {
+	background-color: @@MI_BKG_COLOR@@;
+	margin: 10px;
+	border: 0;
+	padding: 0;
+	font-size:10pt;
+	text-align: center;
+}
+
+* {
+	font-family: Verdana, Helvetica, sans-serif ! important;
+	font-size: 10pt;
+}
+
+/* anchor properties */
+a { 
+	color: #253c65; 
+	text-decoration: underline;
+}
+a:hover { 
+	color: #4980b2; 
+	font-weight:normal; 
+}
+
+table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.box_head_1_dyn a { 
+	color:#FFFFFF; 
+	text-decoration: underline; 
+	font-weight: bold;
+}
+.box_head_1_dyn a:hover { 
+	color:#a5cceb; 
+	text-decoration: none; 
+	font-weight: bold;
+}
+.box_head_2_dyn a { 
+	color:#FFFFFF; 
+	text-decoration: underline; 
+	font-weight: bold;
+}
+.box_head_2_dyn a:hover { 
+	color:#DDDDDD; 
+	text-decoration: none; 
+	font-weight: bold;
+}
+.box_head_2_flip a { 
+	color:#FFFFFF; 
+	text-decoration: underline; 
+	font-weight: bold;
+}
+.box_head_2_flip a:hover { 
+	color:#ffffff; 
+	text-decoration: none; 
+	font-weight: bold;
+}
+.box_content_link {
+}
+.box_content_link a { 
+	color:#000000; 
+	text-decoration: underline; 
+	font-weight: normal;
+}
+.box_content_link a:hover { 
+	color:#336699; 
+	text-decoration: none; 
+	font-weight: normal;
+}
+
+
+
+.bodytable {
+	width: 990px;
+	border: 0;
+	background-color: #ffffff;
+	padding: 0;
+	text-align: left;
+}
+
+/* 3 column main table */
+.maintable {
+	width: 100%;
+	border: 0px solid #AAAAAA;
+	border-collapse: collapse;
+	padding: 2px;
+	margin: 2px;
+	margin-left: 0px;
+}
+
+/*columns in main table */
+.leftcolumn {
+	width: 150px;
+	padding:4px;
+}
+.centercolumn {
+	padding:4px;
+}
+.rightcolumn {
+	width: 150px;
+	padding:4px;
+}
+
+/*box defining properties */
+.box_150 {
+	width: 150px;
+	border-collapse: collapse;
+	border: 0px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+
+}
+.box_content_1 {
+	background-image: url(images/boxhead2/box1_bkg.gif);
+	background-repeat: repeat-x;
+	background-color: #fff;
+	border-left: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	padding: 0px;
+	font-size: 12px;
+}
+.box_head_1_150 {
+	width: 126px;
+	background-color: #336699;
+	background-image:url(images/boxhead2/hd_336699_mid.gif); 
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.box_head_1_left {
+	width:12px;
+	height:21px;
+	background-image:url(images/boxhead2/hd_336699_left.gif);
+}
+.box_head_1_right {
+	width:12px;
+	height:21px;
+	background-image:url(images/boxhead2/hd_336699_right.gif);
+}
+.box_head_2_150 {
+	width: 126px;
+	background-color: #ff9900;
+	background-image:url(images/boxhead2/hd_336699_mid.gif); 
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.box_head_2_left {
+	width:12px;
+	height:21px;
+	background-image:url(images/boxhead2/hd_ff9900_left.gif);
+}
+.box_head_2_right {
+	width:12px;
+	height:21px;
+	background-image:url(images/boxhead2/hd_ff9900_right.gif);
+}
+.box_head_2_left_flip {
+	width:12px;
+	height:21px;
+	background-image:url(images/boxhead2/hd_ff9900_left.gif);
+}
+.box_head_2_right_flip {
+	width:12px;
+	height:21px;
+	background-image:url(images/boxhead2/hd_ff9900_left.gif);
+}
+.box_150_content_2 {
+	width: 148px;
+	background-color: #ccc;
+	border-left: 1px solid #AAAAAA;
+	border-right: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	padding: 4px;
+}
+.box_head_2_dyn {
+	background-color: #ff9900;
+	background-image:url(images/boxhead2/hd_ff9900_mid.gif); 
+	font-weight: bold;
+	font-family:arial;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.box_head_2_flip {
+	background-color: #ff9900;
+	background-image:url(images/boxhead2/hd_ff9900_mid.gif); 
+	font-weight: bold;
+	font-family:arial;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.box_content_2 {
+	background-color: #DDDDDD;
+	border-left: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	padding: 0px;
+	font-size: 12px;
+
+}
+.box_dyn {
+	border-collapse: collapse;
+	border: 0px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+
+}
+.box_head_1_left
+, .box_head_1_dyn
+, .box_head_1_right {
+	background-color: #336699;
+	background-image:url(images/boxhead2/hd_336699_mid.gif); 
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family:arial;
+	font-size: 12px;
+}
+.box_dyn_content {
+	background-image: url(images/boxhead2/box1_bkg.gif);
+	background-repeat: repeat-x;
+	background-color: #fff;
+	border-left: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	padding-left: 2px;
+	padding-bottom: 2px;
+}
+
+/*not boxes*/
+.submenu {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-collapse:collapse;
+	text-indent: 8px;
+	background-image:url(images/boxhead2/submenu_bkg.gif);
+	background-repeat:repeat-x;
+	background-color: #fff;
+	padding: 2px;
+	font-size: 12px;
+}
+.submenu_buttons {
+	padding: 0px 0px 0px 0px;
+	border-collapse:collapse;
+}
+.submenu_center {
+	text-align: center;
+}
+
+.submenu_right {
+	text-align: right;
+}
+
+.submenu_search {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.submenu a { 
+	color:#253c65; 
+	text-decoration: underline; 
+	font-weight: normal;
+}
+.submenu a:hover { 
+	color:#336699; 
+	text-decoration: none; 
+	font-weight: normal;
+}
+
+.formbutton {
+background-color: #ccc;
+border-width: 1px solid #000000;
+color: #000000;
+font-size: 10pt;
+font-weight: bold;
+}
+.user_admin_text1 {
+color: #000000;
+font-size: 12px;
+font-weight: bold;
+}
+h1 {
+font-size: 16px;
+text-align: center;
+font-weight:bold;
+}
+.footertext
+, .copyrighttext {
+	font-size: 10pt;
+	text-align: center;
+}
+.login_box_text1 { font-size: 12px; }
+.login_box_text2 { font-size: 12px; }
+
+/* auction details */
+#auctionDetails {}
+
+#auctionDetails table {
+	border: 0;
+	padding: 0;
+}
+
+#auctionDetails table td {
+	vertical-align: top;
+}
+
+tr.newest_1_result_table_body_odd
+, tr.hottest_1_result_table_body_odd
+, tr.seller_result_table_body_odd
+, tr.search_page_results_odd_row
+, tr.browsing_result_table_body_odd {
+	color: #454545;
+	background-color: #dddddd;
+}
+
+tr.newest_1_result_table_body_even
+, tr.hottest_1_result_table_body_even
+, tr.seller_result_table_body_even
+, tr.search_page_results_even_row
+, tr.browsing_result_table_body_even {
+	color: #454545;
+	background-color: #eeeeee;
+}
+/*hottest listings
+.hottest_1_result_table_body_even {
+	background-color: #ebf2fb;
+}*/
+
+
+/* dealer header */
+.DealerName
+{
+	Color: #000;
+	Font-Family: Arial;
+	Font-Size: 10pt;
+	width:100%;
+	padding: 0;
+	background-image: url(user_images/@@MI_HEADER_LOGO@@);
+	background-color: @@MI_BKG_COLOR@@;
+	background-position:left;
+	background-repeat:no-repeat;
+	height: @@MI_HEADER_HEIGHT@@px;
+}
+
+.DealerName .name
+{
+	Font-Size:12pt;
+	Font-Weight:bold;
+}
+
+.DealerName .Address
+{
+	text-align: right;
+	padding-right: 7px;
+}
+
+.DealerName .AddressEmailLink
+{
+	Text-Decoration:underline;
+}
+
+.DealerName .Divider
+{
+	Height: 1px;
+}
+
+table.menubar
+{
+	width: 100%;
+}
+
+td.menubar_left
+{
+}
+
+td.menubar_right 
+{
+	text-align: right;
+}
+
+td.menubar_right tr
+{
+}
+
+td.menubar_right td
+{
+}
+
+#MainNavWrap {
+	width: 990px;
+	height: 27px;
+	background-image: url(images/boxhead2/topmenu_bkg.gif);
+	background-repeat: repeat-x;
+	background-color: #517ba0;
+}
+
+#MenuBar {
+	height: 27px;
+	background-image: url(images/boxhead2/topmenu_bkg.gif);
+	background-repeat: repeat-x;
+	background-color: #517ba0;
+	float: left;
+}
+
+#MenuBar ul {
+	display: inline;
+	list-style: none;
+}
+
+#MenuBar ul li {
+	float: left;
+	display: block;
+}
+
+#MenuBar ul li a {
+	float: left;
+	display: block;
+	border-right: 1px solid #fff;
+	padding-right: 18px;
+	padding-left: 15px;
+	padding-top: 8px;
+	color: #fff;
+	text-decoration: underline; 
+	font-weight: bold;
+}
+
+
+#MenuBar ul li a:hover {
+	border-top: 1px solid #456684;
+	border-bottom: 1px solid #fff;
+	background-color: #70a5d4;
+	text-decoration: none;
+}
+
+.noHover {
+	display: block;
+	color: #fff;
+	padding-right: 18px;
+	padding-left: 15px;
+	padding-top: 8px;
+	font-weight: bold;
+}
+
+.display_auction_title
+, .page_title
+, .user_management_page_title
+, .my_favorite_ads_title {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.section_title {
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.error_message {
+	color: red;
+	font-weight: bold;
+}

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class PayPal_SDK_Generator</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class PayPal_SDK_Generator</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tool class that handles the PayPal-extended WSDL parsing for  generating functional and type classes.</p>
+<p class="description"><p>$Id: PayPal_SDK_Generator.html,v 1.1.1.1 2010/04/15 09:42:57 peimic.comprock Exp $</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_PayPal_PayPal_SDK_Generator_php.html">/PayPal/SDK/Generator.php</a> (line <span class="field">22</span>)
+		</p>
+		
+				
+		<pre>SOAP_WSDL
+   |
+   --PayPal_SDK_Generator</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_allTypes" title="details" class="var-name">$_allTypes</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+											<span class="method-result">PayPal_SDK_Generator</span>
+										<a href="#PayPal_SDK_Generator" title="details" class="method-name">PayPal_SDK_Generator</a>
+											([<span class="var-type">optional</span>&nbsp;<span class="var-name">$wsdl</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#buildEndpointMap" title="details" class="method-name">buildEndpointMap</a>
+											([<span class="var-type">optional</span>&nbsp;<span class="var-name">$endpointXmlFile</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#buildMethods" title="details" class="method-name">buildMethods</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#buildTypes" title="details" class="method-name">buildTypes</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#describeMethods" title="details" class="method-name">describeMethods</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#generateProxyCode" title="details" class="method-name">generateProxyCode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float</span>
+										<a href="#getWSDLVersion" title="details" class="method-name">getWSDLVersion</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#listMethods" title="details" class="method-name">listMethods</a>
+										()
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_allTypes" id="$_allTypes"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_allTypes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">31</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unique list of types defined in the WSDL.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodPayPal_SDK_Generator" id="PayPal_SDK_Generator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor PayPal_SDK_Generator</span> (line <span class="line-number">39</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor. Calls the parent SOAP_WSDL constructor to parse the WSDL.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">PayPal_SDK_Generator</span>
+		<span class="method-name">
+			PayPal_SDK_Generator
+		</span>
+					([<span class="var-type">optional</span>&nbsp;<span class="var-name">$wsdl</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$wsdl</span><span class="var-description">: string $wsdl  The WSDL. Defaults to what's bundled                                with the SDK.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodbuildEndpointMap" id="buildEndpointMap"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">buildEndpointMap</span> (line <span class="line-number">70</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Builds the endpoint mapping file which is included in the SDK.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> PHP code suitable for writing to a file.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			buildEndpointMap
+		</span>
+					([<span class="var-type">optional</span>&nbsp;<span class="var-name">$endpointXmlFile</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$endpointXmlFile</span><span class="var-description">: string $endpointXmlFile  The endpoint map to use. Defaults                                           to the one bundled with the SDK.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodbuildMethods" id="buildMethods"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">buildMethods</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Builds the dynamically generated portion of the CallerServices  API.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The dynamically generated API functions (PHP code).</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			buildMethods
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodbuildTypes" id="buildTypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">buildTypes</span> (line <span class="line-number">98</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Builds PHP class definitions for all of the complexTypes found  in the WSDL.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of class definitions.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			buildTypes
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methoddescribeMethods" id="describeMethods"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">describeMethods</span> (line <span class="line-number">168</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Describe all methods in all portTypes, including their request  and return types.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of method name =&gt; ('request' =&gt; 'type', 'response' =&gt; 'type')</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			describeMethods
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgenerateProxyCode" id="generateProxyCode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">generateProxyCode</span> (line <span class="line-number">212</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates stub code from the WSDL that can be saved to a file</p>
+<p class="description"><p>or eval'd into existence. Overrides the SOAP_WSDL  implementation to do PayPal-specific type and endpoint  handling. Note that that means there are several assumptions  specific to PayPal's services, such as that each method takes  only one argument.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The methods for $port.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			generateProxyCode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$port</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$port</span><span class="var-description">: The WSDL port we're currently generating.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetWSDLVersion" id="getWSDLVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getWSDLVersion</span> (line <span class="line-number">53</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the version of the WSDL that this SDK is built against.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The WSDL version.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			getWSDLVersion
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodlistMethods" id="listMethods"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">listMethods</span> (line <span class="line-number">149</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List all of the methods in all portTypes.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of method names.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			listMethods
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 23 Jun 2005 13:27:45 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.3</a>
+	</p>
+	</div></body>
+</html>
